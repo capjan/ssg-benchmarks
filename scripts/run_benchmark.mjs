@@ -107,6 +107,12 @@ async function validate(participant, project, manifest) {
   return { ok: errors.length === 0, errors, html_pages: htmlFiles.length, output_bytes: outputBytes, target_output: targetOutput };
 }
 
+async function saveTargetDiagnostic(id, participant, project, validation) {
+  if (!validation.target_output) return;
+  const target = path.join(project, participant.output_dir, validation.target_output);
+  await writeFile(path.join(output, 'logs', `${id}-target.html`), await readFile(target, 'utf8'));
+}
+
 function targetUrl(outputPath, participantId) {
   if (outputPath.endsWith('/index.html')) return `/${outputPath.slice(0, -'index.html'.length)}`;
   if (outputPath === 'index.html') return '/';
@@ -247,6 +253,7 @@ async function main() {
       const coldLog = path.join(output, 'logs', `${id}-build.log`);
       const cold = await run(participant.build[0], participant.build.slice(1), project, benchmarkEnv, coldLog);
       const coldCheck = cold.exit_code === 0 ? await validate(participant, project, manifest) : { ok: false, errors: [`build exited ${cold.exit_code}`] };
+      if (!coldCheck.ok) await saveTargetDiagnostic(id, participant, project, coldCheck);
       records.push({
         run_id: runId, source_commit: sourceCommit, participant: id, tool_version: versions[id] ?? null,
         scenario: 'clean-build', sample, sample_order: order, elapsed_ms: cold.elapsed_ms, status: cold.exit_code === 0 && coldCheck.ok ? 'ok' : 'failed',
@@ -257,6 +264,7 @@ async function main() {
       const warmLog = path.join(output, 'logs', `${id}-build.log`);
       const warm = await run(participant.build[0], participant.build.slice(1), project, benchmarkEnv, warmLog);
       const warmCheck = warm.exit_code === 0 ? await validate(participant, project, manifest) : { ok: false, errors: [`build exited ${warm.exit_code}`] };
+      if (!warmCheck.ok) await saveTargetDiagnostic(id, participant, project, warmCheck);
       records.push({
         run_id: runId, source_commit: sourceCommit, participant: id, tool_version: versions[id] ?? null,
         scenario: 'warm-build', sample, sample_order: order, elapsed_ms: warm.elapsed_ms, status: warm.exit_code === 0 && warmCheck.ok ? 'ok' : 'failed',
@@ -272,6 +280,7 @@ async function main() {
     const project = path.join(ROOT, participant.project);
     const checked = await validate(participant, project, manifest);
     if (!checked.ok) {
+      await saveTargetDiagnostic(id, participant, project, checked);
       records.push({ run_id: runId, source_commit: sourceCommit, participant: id, tool_version: versions[id] ?? null, scenario: 'edit-to-dom', sample: 0, status: 'failed', validation: checked, corpus_size: pages, corpus_sha256: manifest.corpus_sha256, seed });
       continue;
     }
@@ -307,10 +316,11 @@ async function main() {
             status: 'ok', validation: { target_url: pageUrl }, corpus_size: pages, corpus_sha256: manifest.corpus_sha256, seed,
           });
         } catch (error) {
+          const bodyText = await page.locator('body').innerText().catch(() => '');
           records.push({
             run_id: runId, source_commit: sourceCommit, participant: id, tool_version: versions[id] ?? null,
             scenario: 'edit-to-dom', sample: edit, elapsed_ms: null, status: 'failed',
-            validation: { target_url: pageUrl, error: error.message }, corpus_size: pages, corpus_sha256: manifest.corpus_sha256, seed,
+            validation: { target_url: pageUrl, error: error.message, observed_edit_marker: bodyText.match(/BENCHMARK_EDIT_MARKER=EDIT\d{3}/)?.[0] ?? null }, corpus_size: pages, corpus_sha256: manifest.corpus_sha256, seed,
           });
           break;
         }

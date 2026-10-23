@@ -44,8 +44,8 @@ This page includes **bold text**, *italic text*, and `inline code` for the share
 - First list item
 - Second list item
 
-1. Ordered item one
-2. Ordered item two
+1.  Ordered item one
+2.  Ordered item two
 
 | Input | Expected output |
 | --- | --- |
@@ -202,9 +202,8 @@ def setup_projects(root: Path, page_count: int) -> dict[str, dict[str, object]]:
     (zensical / "zensical.toml").write_text(
         '[project]\nsite_name = "SSG Benchmark"\ndocs_dir = "docs"\nsite_dir = "site"\ndev_addr = "127.0.0.1:8001"\n\n[project.theme]\nvariant = "classic"\n', encoding="utf-8")
 
-    mkdocs2 = add("mkdocs-2", "docs", "site", [str(ROOT / ".tools/mkdocs-2/bin/mkdocs"), "build"], [str(ROOT / ".tools/mkdocs-2/bin/mkdocs"), "serve", "--dev-addr", "127.0.0.1:8002"], 8002, ["site", ".cache"])
-    (mkdocs2 / "mkdocs.yml").write_text(
-        "site_name: SSG Benchmark\ndocs_dir: docs\nsite_dir: site\ndev_addr: 127.0.0.1:8002\n", encoding="utf-8")
+    mkdocs_command = str(ROOT / ".tools/mkdocs-2/bin/mkdocs")
+    add("mkdocs-2", "docs", "site", [mkdocs_command, "build", "--dir", "docs", "--output", "site"], [mkdocs_command, "serve", "--dir", "docs"], 8000, ["site", ".cache"])
 
     return participants
 
