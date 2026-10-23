@@ -71,7 +71,9 @@ jobs:
       - name: Install pinned Node tools
         run: npm ci
       - name: Install browser
-        run: npx playwright install --with-deps chromium
+        run: |
+          npx playwright install chromium
+          node --input-type=module -e "import { chromium } from 'playwright'; const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] }); await browser.close();"
       - name: Install MDU
         run: |
           mkdir -p .tools/mdu
