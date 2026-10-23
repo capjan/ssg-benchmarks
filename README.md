@@ -2,17 +2,17 @@
 
 A reproducible, versioned benchmark for static site generators used to publish technical documentation. MDU is the first-party subject; the comparison set covers both general-purpose generators and documentation-focused tools.
 
-**Status:** benchmark design and candidate roster. No performance results have been collected or published yet.
+**Status:** the automated runner and calibration workload are implemented; the first hosted-runner run is pending. No performance results have been collected yet.
 
 ## What we plan to measure
 
 - Clean production build time
-- Repeated and no-op build time
+- Repeated and warm build time
 - Time from a Markdown edit to updated output and visible browser content
-- Peak process memory and generated output size
+- Generated output size; peak process memory is planned for a later measurement pass
 - Feature and output parity, so a fast but incomplete build does not count as a successful run
 
-See the [measurement plan](docs/measurement-plan.md), [shared workload](docs/workload.md), [tool landscape](docs/tool-landscape.md), and [version policy](docs/version-policy.md).
+See the [measurement plan](docs/measurement-plan.md), [runner guide](docs/runner.md), [shared workload](docs/workload.md), [feature matrix](docs/feature-matrix.md), [tool landscape](docs/tool-landscape.md), and [version policy](docs/version-policy.md).
 
 ## Initial comparison set
 
@@ -37,4 +37,5 @@ Every result will record exact generator, theme/plugin, language runtime, depend
 3. Publish raw samples and environment metadata alongside summaries and charts.
 4. Keep build performance separate from the performance of deployed pages.
 5. Never combine measurements from different hardware profiles into one ranking.
+6. Keep all raw observations and retain failed parity checks.
 
