@@ -44,6 +44,8 @@ This page includes **bold text**, *italic text*, and `inline code` for the share
 - First list item
 - Second list item
 
+This page also includes a separate ordered list.
+
 1.  Ordered item one
 2.  Ordered item two
 

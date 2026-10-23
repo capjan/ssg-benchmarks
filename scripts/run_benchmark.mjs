@@ -306,8 +306,8 @@ async function main() {
       for (let edit = 1; edit <= edits; edit += 1) {
         const marker = `EDIT${String(edit).padStart(3, '0')}`;
         source = replaceEditMarker(source, marker);
-        await writeFile(sourcePage, source, 'utf8');
         const started = process.hrtime.bigint();
+        await writeFile(sourcePage, source, 'utf8');
         try {
           await waitForText(page, `BENCHMARK_EDIT_MARKER=${marker}`);
           records.push({
@@ -315,6 +315,7 @@ async function main() {
             scenario: 'edit-to-dom', sample: edit, elapsed_ms: Number(process.hrtime.bigint() - started) / 1e6,
             status: 'ok', validation: { target_url: pageUrl }, corpus_size: pages, corpus_sha256: manifest.corpus_sha256, seed,
           });
+          if (edit < edits) await new Promise(resolve => setTimeout(resolve, 100));
         } catch (error) {
           const bodyText = await page.locator('body').innerText().catch(() => '');
           records.push({
