@@ -205,7 +205,7 @@ def setup_projects(root: Path, page_count: int) -> dict[str, dict[str, object]]:
         '[project]\nsite_name = "SSG Benchmark"\ndocs_dir = "docs"\nsite_dir = "site"\ndev_addr = "127.0.0.1:8001"\n\n[project.theme]\nvariant = "classic"\n', encoding="utf-8")
 
     mkdocs_command = str(ROOT / ".tools/mkdocs-2/bin/mkdocs")
-    add("mkdocs-2", "docs", "site", [mkdocs_command, "build", "--dir", "docs", "--output", "site"], [mkdocs_command, "serve", "--dir", "docs"], 8000, ["site", ".cache"])
+    add("mkdocs-2", "docs", "site", [mkdocs_command, "build", "--dir", "docs", "--output", "site"], [mkdocs_command, "serve", "--dir", "docs"], 8080, ["site", ".cache"])
 
     return participants
 
