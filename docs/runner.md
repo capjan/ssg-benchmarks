@@ -18,6 +18,8 @@ A normal first run uses 50 pages, three clean/warm build pairs, and ten browser-
 
 The harness records its initial correctness checks, output size, page count, corpus hash, exact tool/runtime versions, npm lockfile hash, Python environment manifests, runner image, CPU model, and raw samples. It does not yet collect peak process memory or audit every local link; those checks are required before rankings. Failed builds and failed edit probes are retained with their logs; they are not silently omitted from the run artifact.
 
+MkDocs 2.0.dev6's preview server does not refresh an already open browser page after a source edit. The edit scenario is therefore recorded as `unsupported` for this prerelease and does not fail the workflow; its clean and warm builds are still measured.
+
 Each workflow run uploads raw JSONL, an environment manifest, a summary, and build/server logs. Runs on `main` also commit those files under `data/results/<run-id>/` so the history can be plotted later. Runs on working branches remain artifacts for review.
 
 ## Add or update a version

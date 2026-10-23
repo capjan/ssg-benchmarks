@@ -2,7 +2,7 @@
 
 A reproducible, versioned benchmark for static site generators used to publish technical documentation. MDU is the first-party subject; the comparison set covers both general-purpose generators and documentation-focused tools.
 
-**Status:** the automated runner and calibration workload are implemented; the first hosted-runner run is pending. No performance results have been collected yet.
+**Status:** the automated runner and calibration workload are implemented; the first complete hosted-runner run is pending. Previous attempts produced calibration data but had one unsupported edit case recorded as a failure.
 
 ## What we plan to measure
 

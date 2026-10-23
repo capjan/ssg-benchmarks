@@ -206,6 +206,7 @@ def setup_projects(root: Path, page_count: int) -> dict[str, dict[str, object]]:
 
     mkdocs_command = str(ROOT / ".tools/mkdocs-2/bin/mkdocs")
     add("mkdocs-2", "docs", "site", [mkdocs_command, "build", "--dir", "docs", "--output", "site"], [mkdocs_command, "serve", "--dir", "docs"], 8080, ["site", ".cache"])
+    participants["mkdocs-2"]["edit_to_dom"] = "unsupported"
 
     return participants
 

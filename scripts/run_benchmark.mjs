@@ -152,6 +152,7 @@ function summarize(records) {
   const scenarios = ['clean-build', 'warm-build', 'edit-to-dom'];
   const rows = ids.map(id => {
     const cells = scenarios.map(scenario => {
+      if (scenario === 'edit-to-dom' && records.some(record => record.participant === id && record.scenario === scenario && record.status === 'unsupported')) return 'unsupported';
       const values = records.filter(record => record.participant === id && record.scenario === scenario && record.status === 'ok').map(record => record.elapsed_ms);
       return values.length ? `${median(values).toFixed(1)} (${values.length})` : '—';
     });
@@ -277,6 +278,15 @@ async function main() {
   const chromiumVersion = browser.version();
   for (const id of shuffle(Object.keys(participants), orderSeed + samples + 1)) {
     const participant = participants[id];
+    if (participant.edit_to_dom === 'unsupported') {
+      records.push({
+        run_id: runId, source_commit: sourceCommit, participant: id, tool_version: versions[id] ?? null,
+        scenario: 'edit-to-dom', sample: 0, elapsed_ms: null, status: 'unsupported',
+        validation: { reason: 'preview server does not update an already open browser page after a source edit' },
+        corpus_size: pages, corpus_sha256: manifest.corpus_sha256, seed,
+      });
+      continue;
+    }
     const project = path.join(ROOT, participant.project);
     const checked = await validate(participant, project, manifest);
     if (!checked.ok) {
@@ -378,7 +388,7 @@ async function main() {
   await writeFile(path.join(output, 'results.jsonl'), records.map(record => JSON.stringify({ ...record, environment_id: runId, environment_profile_id: environment.environment_profile_id })).join('\n') + '\n');
   await writeFile(path.join(output, 'summary.md'), summarize(records));
   console.log(`Wrote ${records.length} observations to ${path.relative(ROOT, output)}`);
-  const failed = records.filter(record => record.status !== 'ok');
+  const failed = records.filter(record => record.status === 'failed');
   if (failed.length) {
     console.error(`${failed.length} observations failed validation; see the result files and logs.`);
     process.exitCode = 1;
