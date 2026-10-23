@@ -14,7 +14,7 @@ participants:
   - id: eleventy
     group: general_purpose
     repository: https://github.com/11ty/eleventy
-    phase: wave_1
+    phase: follow_up
   - id: astro-starlight
     group: docs_theme
     repository: https://github.com/withastro/astro

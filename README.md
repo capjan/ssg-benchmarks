@@ -18,13 +18,12 @@ See the [measurement plan](docs/measurement-plan.md), [shared workload](docs/wor
 
 - MDU
 - Hugo
-- Eleventy
 - Astro with Starlight
 - VitePress
 - Docusaurus
 - Zensical
 
-Jekyll and Material for MkDocs are tracked as follow-up/reference candidates. Material for MkDocs is in its final maintenance period; Zensical is its successor.
+Eleventy and Jekyll are tracked as follow-up general-purpose baselines; Material for MkDocs is a reference candidate. Material for MkDocs is in its final maintenance period; Zensical is its successor.
 
 ## Versioning
 
