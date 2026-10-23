@@ -1,0 +1,43 @@
+schema_version: 1
+research_date: 2026-10-23
+version_policy: Resolve the latest stable release immediately before a run and pin it in that run's lock manifest.
+participants:
+  - id: mdu
+    group: first_party
+    repository: https://github.com/capjan/mdu
+    version_source: git_commit
+    phase: wave_1
+  - id: hugo
+    group: general_purpose
+    repository: https://github.com/gohugoio/hugo
+    phase: wave_1
+  - id: eleventy
+    group: general_purpose
+    repository: https://github.com/11ty/eleventy
+    phase: wave_1
+  - id: astro-starlight
+    group: docs_theme
+    repository: https://github.com/withastro/astro
+    theme_repository: https://github.com/withastro/starlight
+    phase: wave_1
+  - id: vitepress
+    group: documentation
+    repository: https://github.com/vuejs/vitepress
+    phase: wave_1
+  - id: docusaurus
+    group: documentation
+    repository: https://github.com/facebook/docusaurus
+    phase: wave_1
+  - id: zensical
+    group: documentation
+    repository: https://github.com/zensical/zensical
+    channel: prerelease
+    phase: wave_1
+  - id: jekyll
+    group: general_purpose
+    repository: https://github.com/jekyll/jekyll
+    phase: follow_up
+  - id: material-for-mkdocs
+    group: documentation
+    repository: https://github.com/squidfunk/mkdocs-material
+    phase: reference
