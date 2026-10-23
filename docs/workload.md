@@ -27,5 +27,9 @@ Before the first timed run, each feature must be marked in a versioned parity ma
 
 The adapter may translate the shared page manifest into each tool's native configuration, but it must not rewrite Markdown content or pre-render HTML. Validate route count, required text and elements, link destinations, and edit propagation.
 
-The common-output profile uses the same small HTML/CSS shell as far as each templating system permits. A later native-docs profile can add default themes and richer features such as Mermaid diagrams, admonitions, search, and syntax highlighting. Results from those two profiles answer different questions and stay in separate chart series.
+The common-output profile uses the same small HTML/CSS shell as far as each templating system permits. The native-docs profile uses default themes and can later add richer features such as Mermaid diagrams, admonitions, search, and syntax highlighting. Results from the two profiles answer different questions and stay in separate chart series.
 
+
+## First automated profile
+
+The first runner uses each documentation tool's standard site setup (Starlight, VitePress default theme, Docusaurus Classic, Material, and Zensical Classic), plus a minimal Hugo shell and MDU's built-in output. These measurements compare the configured documentation toolchains and are calibration data; they do not isolate the underlying Markdown engine or support a ranking. A later common-output profile can reduce theme differences.

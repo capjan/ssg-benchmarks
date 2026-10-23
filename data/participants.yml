@@ -1,15 +1,18 @@
 schema_version: 1
 research_date: 2026-10-23
-version_policy: Resolve the latest stable release immediately before a run and pin it in that run's lock manifest.
+version_policy: Resolve stable release pins before each benchmark update; preserve exact package locks and environment data with every run.
 participants:
   - id: mdu
     group: first_party
     repository: https://github.com/capjan/mdu
-    version_source: git_commit
+    version_source: git_release_and_dotnet_tool
+    version: 5.3.0
     phase: wave_1
   - id: hugo
     group: general_purpose
     repository: https://github.com/gohugoio/hugo
+    version_source: github_release
+    version: 0.167.0
     phase: wave_1
   - id: eleventy
     group: general_purpose
@@ -19,18 +22,26 @@ participants:
     group: docs_theme
     repository: https://github.com/withastro/astro
     theme_repository: https://github.com/withastro/starlight
+    version: Astro 7.4.2; Starlight 0.42.7
+    version_source: npm_lockfile
     phase: wave_1
   - id: vitepress
     group: documentation
     repository: https://github.com/vuejs/vitepress
+    version: 1.6.4
+    version_source: npm_lockfile
     phase: wave_1
   - id: docusaurus
     group: documentation
     repository: https://github.com/facebook/docusaurus
+    version: 3.10.2
+    version_source: npm_lockfile
     phase: wave_1
   - id: zensical
     group: documentation
     repository: https://github.com/zensical/zensical
+    version: 0.0.72
+    version_source: pypi_lock_manifest
     channel: prerelease
     phase: wave_1
   - id: jekyll
@@ -42,10 +53,12 @@ participants:
     repository: https://github.com/squidfunk/mkdocs-material
     version: 9.7.7
     compatible_mkdocs: 1.6.1
+    version_source: pypi_lock_manifest
     phase: wave_1
   - id: mkdocs-2
     group: documentation_prerelease
     repository: https://github.com/encode/mkdocs
     version: 2.0.dev6
+    version_source: pypi_lock_manifest
     channel: prerelease
     phase: wave_1_experimental
