@@ -38,6 +38,14 @@ participants:
     repository: https://github.com/jekyll/jekyll
     phase: follow_up
   - id: material-for-mkdocs
-    group: documentation
+    group: documentation_maintenance
     repository: https://github.com/squidfunk/mkdocs-material
-    phase: reference
+    version: 9.7.7
+    compatible_mkdocs: 1.6.1
+    phase: wave_1
+  - id: mkdocs-2
+    group: documentation_prerelease
+    repository: https://github.com/encode/mkdocs
+    version: 2.0.dev6
+    channel: prerelease
+    phase: wave_1_experimental
