@@ -2,7 +2,11 @@
 
 A reproducible, versioned benchmark for static site generators used to publish technical documentation. MDU is the first-party subject; the comparison set covers both general-purpose generators and documentation-focused tools.
 
-**Status:** the automated runner and calibration workload are implemented; the first complete hosted-runner run is pending. Previous attempts produced calibration data but had one unsupported edit case recorded as a failure.
+**Status:** first hosted calibration results are available. The successful run measured eight generators with 50 pages, three clean/no-op build samples, and ten browser edits per supported preview server. It contains 118 timings and one explicitly unsupported MkDocs 2.0 edit scenario; these are exploratory measurements, not a ranking.
+
+See the [run summary](data/results/40016228825-1/summary.md), [raw observations](data/results/40016228825-1/results.jsonl), and [environment manifest](data/results/40016228825-1/environment.json). The full run and logs are available in [GitHub Actions](https://github.com/capjan/ssg-benchmarks/actions/runs/40016228825).
+
+![First calibration run: build and edit medians](data/results/40016228825-1/chart.svg)
 
 ## What we plan to measure
 

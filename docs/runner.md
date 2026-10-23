@@ -27,6 +27,6 @@ Each workflow run uploads raw JSONL, an environment manifest, a summary, and bui
 - Update Node tool versions in `package.json`, then regenerate `package-lock.json` with the pinned Node/npm toolchain.
 - Update a Python tool pin in `requirements/` and `data/participants.yml`.
 - Update MDU or Hugo's exact version in the workflow and participant list.
-- Run the 50-page profile first. A result counts only if its build output passes the parity checks and the edit marker reaches Chromium.
+- Run the 50-page profile first. Each build counts only if its output passes the current smoke checks; edit timings count only when the browser sees the new marker. Unsupported edit scenarios are recorded separately.
 
-The starter workload contains common Markdown syntax, nested routes, local links, and one fixed-length edit marker. The first automated gate verifies page count, unique page markers, basic rendered HTML elements, and the browser-visible edit. It does not yet audit every link or cover the full feature matrix, so these are preliminary measurements rather than a ranking.
+The starter workload contains common Markdown syntax, nested routes, local links, and one fixed-length edit marker. The first automated gate verifies page count, unique page markers, and basic rendered HTML elements; it times browser-visible edits for participants whose preview server supports them. It does not yet audit every link or cover the full feature matrix, so these are preliminary measurements rather than a ranking. The first successful hosted run and its raw observations are linked from the repository README.
