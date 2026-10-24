@@ -206,7 +206,7 @@ function summarize(records, featureMatrix, environment) {
     '',
     '## Markdown feature parity',
     '',
-    'Pass means the generated output contains the expected semantic HTML and all fixture links/images resolve locally. The detailed evidence is in `feature-matrix.json`.',
+    'Pass means the generated output contains the expected semantic HTML and all fixture links/images resolve locally. Feature audit failures are reported separately and do not remove otherwise valid timing observations. The detailed evidence is in `feature-matrix.json`.',
     '',
     `| Generator | ${Object.values(featureNames).join(' | ')} |`,
     `| --- | ${Object.keys(featureNames).map(() => '---').join(' | ')} |`,
@@ -490,14 +490,6 @@ async function main() {
     }
   }
   await browser.close();
-
-  for (const [id, audit] of Object.entries(featureMatrix)) {
-    if (audit.status === 'pass') continue;
-    for (const record of records.filter(record => record.participant === id && record.status === 'ok')) {
-      record.status = 'failed';
-      record.validation.feature_parity = audit;
-    }
-  }
 
   const environment = {
     run_id: runId,

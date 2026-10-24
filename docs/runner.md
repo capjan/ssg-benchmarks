@@ -20,7 +20,7 @@ The harness records its initial correctness checks, output size, page count, cor
 
 MkDocs 2.0.dev6's preview server does not refresh an already open browser page after a source edit. The edit scenario is therefore recorded as `unsupported` for this prerelease and does not fail the workflow; its clean and warm builds are still measured.
 
-Each workflow run uploads raw JSONL, an environment manifest, the feature audit, a summary, a generated SVG chart, and build/server logs. The feature audit checks each workload feature against the final generated output and resolves every fixture link and image. Runs on `main` also commit the report files under `data/results/<run-id>/` so the history can be plotted later. Runs on working branches remain artifacts for review.
+Each workflow run uploads raw JSONL, an environment manifest, the feature audit, a summary, a generated SVG chart, and build/server logs. The feature audit checks each workload feature against the final generated output and resolves every fixture link and image. Feature failures are reported separately and do not discard valid timing samples. Runs on `main` also commit the report files under `data/results/<run-id>/` so the history can be plotted later. Runs on working branches remain artifacts for review.
 
 ## Add or update a version
 
