@@ -16,7 +16,7 @@ A normal first run uses 50 pages, three clean/warm build pairs, and ten browser-
 - **Warm build:** run the same build again without source changes.
 - **Edit to DOM:** keep the preview server and Chromium page open, write a same-length edit marker to one Markdown page, and time until the new marker appears in the page's DOM.
 
-The harness records its initial correctness checks, output size, page count, corpus hash, exact tool/runtime versions, npm lockfile hash, Python environment manifests, runner image, CPU model, and raw samples. It does not yet collect peak process memory or audit every local link; those checks are required before rankings. Failed builds and failed edit probes are retained with their logs; they are not silently omitted from the run artifact.
+The harness records smoke-check results, output size, page count, corpus hash, exact tool/runtime versions, npm lockfile hash, Python environment manifests, runner image, CPU model, and raw samples. The feature audit checks every link and image in the shared fixture, but it does not audit arbitrary site content. Peak process memory is not collected yet. Feature mismatches remain in the feature report and do not invalidate otherwise valid timings; failed builds and edit probes remain in the raw data and logs.
 
 MkDocs 2.0.dev6's preview server does not refresh an already open browser page after a source edit. The edit scenario is therefore recorded as `unsupported` for this prerelease and does not fail the workflow; its clean and warm builds are still measured.
 

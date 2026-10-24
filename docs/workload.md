@@ -12,7 +12,7 @@ The common profile uses portable Markdown and avoids framework-specific syntax u
 
 No front matter is required in the initial corpus; page titles come from the first heading and navigation order from the shared path manifest. This keeps content portable and avoids testing metadata conventions instead of rendering.
 
-Before the first timed run, each feature must be marked in a versioned parity matrix as native, enabled by an official extension, enabled by a third-party extension, or unsupported. If a feature cannot be made equivalent without custom preprocessing, remove it from the common profile and record it as a separate extension profile.
+Each feature is recorded in a versioned parity matrix as native, enabled by an official extension, enabled by a third-party extension, or unsupported for the tested configuration. A mismatch remains visible and does not erase valid performance timings. Before a comparative ranking, either make the common profile equivalent or report separate parity groups. If a feature cannot be made equivalent without custom preprocessing, move it to a separate extension profile.
 
 ## Corpus shape
 

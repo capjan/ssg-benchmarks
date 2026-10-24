@@ -14,7 +14,7 @@ See the [latest run summary](data/results/40139448552-1/summary.md), [raw observ
 - Repeated and warm build time
 - Time from a Markdown edit to updated output and visible browser content
 - Generated output size; peak process memory is planned for a later measurement pass
-- Feature and output parity, so a fast but incomplete build does not count as a successful run
+- Feature and output parity, reported beside performance so incomplete output stays visible
 
 See the [measurement plan](docs/measurement-plan.md), [runner guide](docs/runner.md), [shared workload](docs/workload.md), [feature matrix](docs/feature-matrix.md), [tool landscape](docs/tool-landscape.md), and [version policy](docs/version-policy.md).
 

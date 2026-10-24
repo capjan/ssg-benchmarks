@@ -46,15 +46,14 @@ These are initial targets. The first calibration run should measure fixture pari
 
 ## Correctness gate
 
-For the first calibration run, the automated gate verifies generated page count, each unique page marker, required HTML elements on the edit page, and browser-visible marker updates. Route-by-route link validation and complete feature parity remain required before a comparative ranking. A timing sample is valid only if the adapter:
+The runner keeps two correctness dimensions separate. Its smoke gate verifies generated page count, each unique page marker, required HTML elements, and browser-visible marker updates. The feature audit records semantic HTML and whether all fixture links and images resolve. A feature mismatch does not invalidate otherwise valid timing samples, but participants with different feature parity must not be presented as equivalent in a ranking. A timing sample is valid only if the adapter:
 
-- exits successfully and emits the expected page count and routes;
-- includes the required headings, text markers, code blocks, images, and links;
-- resolves all local links in the shared fixture;
+- exits successfully and emits the expected page count and route markers;
+- passes the target-page HTML smoke check;
 - reflects the edit marker in generated HTML and in the browser;
 - reports no fatal parser or theme errors.
 
-Store failed attempts and reasons as run metadata; do not silently discard them.
+Store failed attempts and feature mismatches with evidence; do not silently discard them. Before publishing a comparative ranking, resolve mismatches in the common profile or separate participants into clearly labeled parity groups.
 
 ## Raw data and charts
 
