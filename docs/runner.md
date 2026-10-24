@@ -20,13 +20,14 @@ The harness records its initial correctness checks, output size, page count, cor
 
 MkDocs 2.0.dev6's preview server does not refresh an already open browser page after a source edit. The edit scenario is therefore recorded as `unsupported` for this prerelease and does not fail the workflow; its clean and warm builds are still measured.
 
-Each workflow run uploads raw JSONL, an environment manifest, a summary, and build/server logs. Runs on `main` also commit those files under `data/results/<run-id>/` so the history can be plotted later. Runs on working branches remain artifacts for review.
+Each workflow run uploads raw JSONL, an environment manifest, the feature audit, a summary, a generated SVG chart, and build/server logs. The feature audit checks each workload feature against the final generated output and resolves every fixture link and image. Runs on `main` also commit the report files under `data/results/<run-id>/` so the history can be plotted later. Runs on working branches remain artifacts for review.
 
 ## Add or update a version
 
 - Update Node tool versions in `package.json`, then regenerate `package-lock.json` with the pinned Node/npm toolchain.
 - Update a Python tool pin in `requirements/` and `data/participants.yml`.
 - Update MDU or Hugo's exact version in the workflow and participant list.
+- Add the adapter and its generated display name in `scripts/prepare.py` and `scripts/run_benchmark.mjs`. Summary rows and charts are generated from measured participant IDs, so they do not need manual data edits.
 - Run the 50-page profile first. Each build counts only if its output passes the current smoke checks; edit timings count only when the browser sees the new marker. Unsupported edit scenarios are recorded separately.
 
-The starter workload contains common Markdown syntax, nested routes, local links, and one fixed-length edit marker. The first automated gate verifies page count, unique page markers, and basic rendered HTML elements; it times browser-visible edits for participants whose preview server supports them. It does not yet audit every link or cover the full feature matrix, so these are preliminary measurements rather than a ranking. The first successful hosted run and its raw observations are linked from the repository README.
+The starter workload contains common Markdown syntax, nested routes, local links, and one fixed-length edit marker. The automated gate verifies page count, unique page markers, semantic HTML for each feature, and fixture link/image targets; it times browser-visible edits for participants whose preview server supports them. This verifies only the shared workload, not every feature each generator supports. The first successful hosted run and its raw observations are linked from the repository README.
