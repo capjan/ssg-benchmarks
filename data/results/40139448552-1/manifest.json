@@ -1,0 +1,236 @@
+{
+  "page_count": 50,
+  "seed": 20261023,
+  "corpus_sha256": "4370f46de4eedacc0490038790456c385be59c86c1a30840fd6371b7fb0d59c1",
+  "target_source": "pages/section-00/page-00001.md",
+  "participants": {
+    "mdu": {
+      "project": ".bench/projects/mdu",
+      "docs_dir": "docs",
+      "output_dir": "site",
+      "build": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/.tools/mdu/mdu",
+        "render",
+        "docs",
+        "site"
+      ],
+      "serve": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/.tools/mdu/mdu",
+        "serve",
+        "docs",
+        "site",
+        "--port",
+        "4173",
+        "--no-browser"
+      ],
+      "port": 4173,
+      "clean_dirs": [
+        "site"
+      ],
+      "page_count": 50
+    },
+    "hugo": {
+      "project": ".bench/projects/hugo",
+      "docs_dir": "content",
+      "output_dir": "public",
+      "build": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/.tools/hugo/hugo",
+        "--source",
+        ".",
+        "--destination",
+        "public"
+      ],
+      "serve": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/.tools/hugo/hugo",
+        "server",
+        "--bind",
+        "127.0.0.1",
+        "--port",
+        "1313"
+      ],
+      "port": 1313,
+      "clean_dirs": [
+        "public",
+        "resources/_gen",
+        ".hugo_build.lock"
+      ],
+      "page_count": 50
+    },
+    "astro-starlight": {
+      "project": ".bench/projects/astro-starlight",
+      "docs_dir": "src/content/docs",
+      "output_dir": "dist",
+      "build": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/node_modules/.bin/astro",
+        "build"
+      ],
+      "serve": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/node_modules/.bin/astro",
+        "dev",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "4321"
+      ],
+      "port": 4321,
+      "clean_dirs": [
+        "dist",
+        ".astro"
+      ],
+      "page_count": 50
+    },
+    "vitepress": {
+      "project": ".bench/projects/vitepress",
+      "docs_dir": "docs",
+      "output_dir": "docs/.vitepress/dist",
+      "build": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/node_modules/.bin/vitepress",
+        "build",
+        "docs"
+      ],
+      "serve": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/node_modules/.bin/vitepress",
+        "dev",
+        "docs",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "4174"
+      ],
+      "port": 4174,
+      "clean_dirs": [
+        "docs/.vitepress/dist",
+        "docs/.vitepress/cache"
+      ],
+      "page_count": 50
+    },
+    "docusaurus": {
+      "project": ".bench/projects/docusaurus",
+      "docs_dir": "docs",
+      "output_dir": "build",
+      "build": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/node_modules/.bin/docusaurus",
+        "build"
+      ],
+      "serve": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/node_modules/.bin/docusaurus",
+        "start",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "3000",
+        "--no-open"
+      ],
+      "port": 3000,
+      "clean_dirs": [
+        "build",
+        ".docusaurus"
+      ],
+      "page_count": 50
+    },
+    "material-for-mkdocs": {
+      "project": ".bench/projects/material-for-mkdocs",
+      "docs_dir": "docs",
+      "output_dir": "site",
+      "build": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/.tools/material/bin/mkdocs",
+        "build"
+      ],
+      "serve": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/.tools/material/bin/mkdocs",
+        "serve",
+        "--dev-addr",
+        "127.0.0.1:8000"
+      ],
+      "port": 8000,
+      "clean_dirs": [
+        "site",
+        ".cache"
+      ],
+      "page_count": 50
+    },
+    "zensical": {
+      "project": ".bench/projects/zensical",
+      "docs_dir": "docs",
+      "output_dir": "site",
+      "build": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/.tools/zensical/bin/zensical",
+        "build"
+      ],
+      "serve": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/.tools/zensical/bin/zensical",
+        "serve"
+      ],
+      "port": 8001,
+      "clean_dirs": [
+        "site",
+        ".cache"
+      ],
+      "page_count": 50
+    },
+    "mkdocs-2": {
+      "project": ".bench/projects/mkdocs-2",
+      "docs_dir": "docs",
+      "output_dir": "site",
+      "build": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/.tools/mkdocs-2/bin/mkdocs",
+        "build",
+        "--dir",
+        "docs",
+        "--output",
+        "site"
+      ],
+      "serve": [
+        "/home/runner/work/ssg-benchmarks/ssg-benchmarks/.tools/mkdocs-2/bin/mkdocs",
+        "serve",
+        "--dir",
+        "docs"
+      ],
+      "port": 8080,
+      "clean_dirs": [
+        "site",
+        ".cache"
+      ],
+      "page_count": 50,
+      "edit_to_dom": "unsupported"
+    }
+  },
+  "sample_count": 3,
+  "edit_count": 10,
+  "participant_order_seed": 1792901973188,
+  "tooling_versions": {
+    "astro": "7.4.2",
+    "@astrojs/starlight": "0.42.7",
+    "vitepress": "1.6.4",
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "@docusaurus/faster": "3.10.2",
+    "@mdx-js/react": "3.1.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "playwright": "1.64.1",
+    "astro-starlight": {
+      "astro": "7.4.2",
+      "starlight": "0.42.7"
+    },
+    "docusaurus": {
+      "core": "3.10.2",
+      "preset_classic": "3.10.2"
+    },
+    "mdu": "5.3.0+e3d7987c58a1d68d3087a8d8a6e06395176bbe0f",
+    "hugo": "hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8 linux/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio",
+    "material-for-mkdocs": {
+      "mkdocs": "1.6.1",
+      "mkdocs-material": "9.7.7",
+      "python": "Python 3.12.15"
+    },
+    "zensical": {
+      "zensical": "0.0.72",
+      "python": "Python 3.12.15"
+    },
+    "mkdocs-2": {
+      "mkdocs": "2.0.dev6",
+      "python": "Python 3.12.15"
+    }
+  }
+}

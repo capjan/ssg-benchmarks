@@ -1,0 +1,533 @@
+{
+  "run_id": "40139448552-1",
+  "source_commit": "4b879275c9a09822b468bae230d46e36850d855e",
+  "corpus_size": 50,
+  "corpus_sha256": "4370f46de4eedacc0490038790456c385be59c86c1a30840fd6371b7fb0d59c1",
+  "seed": 20261023,
+  "environment_profile_id": "5083b2ff4c4857d7",
+  "participants": {
+    "mdu": {
+      "features": {
+        "emphasis_and_inline_code": {
+          "emphasis": "italic text",
+          "inline_code": true,
+          "status": "pass",
+          "strong": "bold text"
+        },
+        "headings_and_paragraphs": {
+          "h1": 1,
+          "paragraphs": 9,
+          "status": "pass"
+        },
+        "lists_and_block_quotes": {
+          "block_quotes": 1,
+          "ordered_lists": 1,
+          "status": "pass",
+          "unordered_lists": 4
+        },
+        "local_images": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "nested_markdown_pages": {
+          "duplicate_markers": 0,
+          "expected": 50,
+          "incorrect_routes": [],
+          "rendered": 50,
+          "status": "pass"
+        },
+        "relative_markdown_links": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "tables_and_fenced_code": {
+          "fenced_code": true,
+          "preformatted_blocks": 1,
+          "status": "pass",
+          "tables": 1
+        }
+      },
+      "status": "pass",
+      "tool_version": "5.3.0+e3d7987c58a1d68d3087a8d8a6e06395176bbe0f"
+    },
+    "hugo": {
+      "features": {
+        "emphasis_and_inline_code": {
+          "emphasis": "italic text",
+          "inline_code": true,
+          "status": "pass",
+          "strong": "bold text"
+        },
+        "headings_and_paragraphs": {
+          "h1": 1,
+          "paragraphs": 8,
+          "status": "pass"
+        },
+        "lists_and_block_quotes": {
+          "block_quotes": 1,
+          "ordered_lists": 1,
+          "status": "pass",
+          "unordered_lists": 1
+        },
+        "local_images": {
+          "broken": [
+            {
+              "from": "pages/section-00/page-00001/index.html",
+              "src": "../../assets/benchmark.svg"
+            },
+            {
+              "from": "pages/section-00/page-00002/index.html",
+              "src": "../../assets/benchmark.svg"
+            },
+            {
+              "from": "pages/section-00/page-00003/index.html",
+              "src": "../../assets/benchmark.svg"
+            },
+            {
+              "from": "pages/section-00/page-00004/index.html",
+              "src": "../../assets/benchmark.svg"
+            },
+            {
+              "from": "pages/section-00/page-00005/index.html",
+              "src": "../../assets/benchmark.svg"
+            },
+            {
+              "from": "pages/section-00/page-00006/index.html",
+              "src": "../../assets/benchmark.svg"
+            },
+            {
+              "from": "pages/section-00/page-00007/index.html",
+              "src": "../../assets/benchmark.svg"
+            },
+            {
+              "from": "pages/section-00/page-00008/index.html",
+              "src": "../../assets/benchmark.svg"
+            },
+            {
+              "from": "pages/section-00/page-00009/index.html",
+              "src": "../../assets/benchmark.svg"
+            },
+            {
+              "from": "pages/section-00/page-00010/index.html",
+              "src": "../../assets/benchmark.svg"
+            }
+          ],
+          "checked": 50,
+          "expected": 50,
+          "status": "fail"
+        },
+        "nested_markdown_pages": {
+          "duplicate_markers": 0,
+          "expected": 50,
+          "incorrect_routes": [],
+          "rendered": 50,
+          "status": "pass"
+        },
+        "relative_markdown_links": {
+          "broken": [
+            {
+              "from": "pages/section-00/page-00001/index.html",
+              "href": "../section-00/page-00002.md"
+            },
+            {
+              "from": "pages/section-00/page-00002/index.html",
+              "href": "../section-00/page-00003.md"
+            },
+            {
+              "from": "pages/section-00/page-00003/index.html",
+              "href": "../section-00/page-00004.md"
+            },
+            {
+              "from": "pages/section-00/page-00004/index.html",
+              "href": "../section-00/page-00005.md"
+            },
+            {
+              "from": "pages/section-00/page-00005/index.html",
+              "href": "../section-00/page-00006.md"
+            },
+            {
+              "from": "pages/section-00/page-00006/index.html",
+              "href": "../section-00/page-00007.md"
+            },
+            {
+              "from": "pages/section-00/page-00007/index.html",
+              "href": "../section-00/page-00008.md"
+            },
+            {
+              "from": "pages/section-00/page-00008/index.html",
+              "href": "../section-00/page-00009.md"
+            },
+            {
+              "from": "pages/section-00/page-00009/index.html",
+              "href": "../section-00/page-00010.md"
+            },
+            {
+              "from": "pages/section-00/page-00010/index.html",
+              "href": "../section-00/page-00011.md"
+            }
+          ],
+          "checked": 50,
+          "expected": 50,
+          "status": "fail"
+        },
+        "tables_and_fenced_code": {
+          "fenced_code": true,
+          "preformatted_blocks": 1,
+          "status": "pass",
+          "tables": 1
+        }
+      },
+      "status": "fail",
+      "tool_version": "hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8 linux/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio"
+    },
+    "astro-starlight": {
+      "features": {
+        "emphasis_and_inline_code": {
+          "emphasis": "italic text",
+          "inline_code": true,
+          "status": "pass",
+          "strong": "bold text"
+        },
+        "headings_and_paragraphs": {
+          "h1": 2,
+          "paragraphs": 8,
+          "status": "pass"
+        },
+        "lists_and_block_quotes": {
+          "block_quotes": 1,
+          "ordered_lists": 1,
+          "status": "pass",
+          "unordered_lists": 6
+        },
+        "local_images": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "nested_markdown_pages": {
+          "duplicate_markers": 0,
+          "expected": 50,
+          "incorrect_routes": [],
+          "rendered": 50,
+          "status": "pass"
+        },
+        "relative_markdown_links": {
+          "broken": [
+            {
+              "from": "pages/section-00/page-00001/index.html",
+              "href": "../section-00/page-00002.md"
+            },
+            {
+              "from": "pages/section-00/page-00002/index.html",
+              "href": "../section-00/page-00003.md"
+            },
+            {
+              "from": "pages/section-00/page-00003/index.html",
+              "href": "../section-00/page-00004.md"
+            },
+            {
+              "from": "pages/section-00/page-00004/index.html",
+              "href": "../section-00/page-00005.md"
+            },
+            {
+              "from": "pages/section-00/page-00005/index.html",
+              "href": "../section-00/page-00006.md"
+            },
+            {
+              "from": "pages/section-00/page-00006/index.html",
+              "href": "../section-00/page-00007.md"
+            },
+            {
+              "from": "pages/section-00/page-00007/index.html",
+              "href": "../section-00/page-00008.md"
+            },
+            {
+              "from": "pages/section-00/page-00008/index.html",
+              "href": "../section-00/page-00009.md"
+            },
+            {
+              "from": "pages/section-00/page-00009/index.html",
+              "href": "../section-00/page-00010.md"
+            },
+            {
+              "from": "pages/section-00/page-00010/index.html",
+              "href": "../section-00/page-00011.md"
+            }
+          ],
+          "checked": 50,
+          "expected": 50,
+          "status": "fail"
+        },
+        "tables_and_fenced_code": {
+          "fenced_code": true,
+          "preformatted_blocks": 1,
+          "status": "pass",
+          "tables": 1
+        }
+      },
+      "status": "fail",
+      "tool_version": {
+        "astro": "7.4.2",
+        "starlight": "0.42.7"
+      }
+    },
+    "vitepress": {
+      "features": {
+        "emphasis_and_inline_code": {
+          "emphasis": "italic text",
+          "inline_code": true,
+          "status": "pass",
+          "strong": "bold text"
+        },
+        "headings_and_paragraphs": {
+          "h1": 1,
+          "paragraphs": 59,
+          "status": "pass"
+        },
+        "lists_and_block_quotes": {
+          "block_quotes": 1,
+          "ordered_lists": 1,
+          "status": "pass",
+          "unordered_lists": 2
+        },
+        "local_images": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "nested_markdown_pages": {
+          "duplicate_markers": 0,
+          "expected": 50,
+          "incorrect_routes": [],
+          "rendered": 50,
+          "status": "pass"
+        },
+        "relative_markdown_links": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "tables_and_fenced_code": {
+          "fenced_code": true,
+          "preformatted_blocks": 1,
+          "status": "pass",
+          "tables": 1
+        }
+      },
+      "status": "pass",
+      "tool_version": "1.6.4"
+    },
+    "docusaurus": {
+      "features": {
+        "emphasis_and_inline_code": {
+          "emphasis": "italic text",
+          "inline_code": true,
+          "status": "pass",
+          "strong": "bold text"
+        },
+        "headings_and_paragraphs": {
+          "h1": 1,
+          "paragraphs": 8,
+          "status": "pass"
+        },
+        "lists_and_block_quotes": {
+          "block_quotes": 1,
+          "ordered_lists": 1,
+          "status": "pass",
+          "unordered_lists": 5
+        },
+        "local_images": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "nested_markdown_pages": {
+          "duplicate_markers": 0,
+          "expected": 50,
+          "incorrect_routes": [],
+          "rendered": 50,
+          "status": "pass"
+        },
+        "relative_markdown_links": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "tables_and_fenced_code": {
+          "fenced_code": true,
+          "preformatted_blocks": 1,
+          "status": "pass",
+          "tables": 1
+        }
+      },
+      "status": "pass",
+      "tool_version": {
+        "core": "3.10.2",
+        "preset_classic": "3.10.2"
+      }
+    },
+    "material-for-mkdocs": {
+      "features": {
+        "emphasis_and_inline_code": {
+          "emphasis": "italic text",
+          "inline_code": true,
+          "status": "pass",
+          "strong": "bold text"
+        },
+        "headings_and_paragraphs": {
+          "h1": 1,
+          "paragraphs": 8,
+          "status": "pass"
+        },
+        "lists_and_block_quotes": {
+          "block_quotes": 1,
+          "ordered_lists": 2,
+          "status": "pass",
+          "unordered_lists": 4
+        },
+        "local_images": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "nested_markdown_pages": {
+          "duplicate_markers": 0,
+          "expected": 50,
+          "incorrect_routes": [],
+          "rendered": 50,
+          "status": "pass"
+        },
+        "relative_markdown_links": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "tables_and_fenced_code": {
+          "fenced_code": true,
+          "preformatted_blocks": 1,
+          "status": "pass",
+          "tables": 1
+        }
+      },
+      "status": "pass",
+      "tool_version": {
+        "mkdocs": "1.6.1",
+        "mkdocs-material": "9.7.7",
+        "python": "Python 3.12.15"
+      }
+    },
+    "zensical": {
+      "features": {
+        "emphasis_and_inline_code": {
+          "emphasis": "italic text",
+          "inline_code": true,
+          "status": "pass",
+          "strong": "bold text"
+        },
+        "headings_and_paragraphs": {
+          "h1": 1,
+          "paragraphs": 8,
+          "status": "pass"
+        },
+        "lists_and_block_quotes": {
+          "block_quotes": 1,
+          "ordered_lists": 1,
+          "status": "pass",
+          "unordered_lists": 4
+        },
+        "local_images": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "nested_markdown_pages": {
+          "duplicate_markers": 0,
+          "expected": 50,
+          "incorrect_routes": [],
+          "rendered": 50,
+          "status": "pass"
+        },
+        "relative_markdown_links": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "tables_and_fenced_code": {
+          "fenced_code": true,
+          "preformatted_blocks": 1,
+          "status": "pass",
+          "tables": 1
+        }
+      },
+      "status": "pass",
+      "tool_version": {
+        "zensical": "0.0.72",
+        "python": "Python 3.12.15"
+      }
+    },
+    "mkdocs-2": {
+      "features": {
+        "emphasis_and_inline_code": {
+          "emphasis": "italic text",
+          "inline_code": true,
+          "status": "pass",
+          "strong": "bold text"
+        },
+        "headings_and_paragraphs": {
+          "h1": 1,
+          "paragraphs": 8,
+          "status": "pass"
+        },
+        "lists_and_block_quotes": {
+          "block_quotes": 1,
+          "ordered_lists": 1,
+          "status": "pass",
+          "unordered_lists": 3
+        },
+        "local_images": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "nested_markdown_pages": {
+          "duplicate_markers": 0,
+          "expected": 50,
+          "incorrect_routes": [],
+          "rendered": 50,
+          "status": "pass"
+        },
+        "relative_markdown_links": {
+          "broken": [],
+          "checked": 50,
+          "expected": 50,
+          "status": "pass"
+        },
+        "tables_and_fenced_code": {
+          "fenced_code": true,
+          "preformatted_blocks": 1,
+          "status": "pass",
+          "tables": 1
+        }
+      },
+      "status": "pass",
+      "tool_version": {
+        "mkdocs": "2.0.dev6",
+        "python": "Python 3.12.15"
+      }
+    }
+  }
+}
