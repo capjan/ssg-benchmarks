@@ -1,0 +1,25 @@
+participant,scenario,tool_version,feature_parity,failed,unsupported,n,median_ms,mad_ms,min_ms,max_ms,p95_ms,ci95_low_ms,ci95_high_ms,uncertainty
+astro-starlight,clean-build,"{""astro"": ""7.4.2"", ""starlight"": ""0.42.7""}",fail,0,0,3,2230.322076,71.69447499999978,2158.627601,2401.401054,,,,insufficient build samples (need 10)
+astro-starlight,edit-to-dom,"{""astro"": ""7.4.2"", ""starlight"": ""0.42.7""}",fail,0,0,10,737.8713805,2.500201500000003,731.363577,783.627614,,,,descriptive only: edits share one server/browser session
+astro-starlight,warm-build,"{""astro"": ""7.4.2"", ""starlight"": ""0.42.7""}",fail,0,0,3,2281.505323,8.635901999999987,2123.393622,2290.141225,,,,insufficient build samples (need 10)
+docusaurus,clean-build,"{""core"": ""3.10.2"", ""preset_classic"": ""3.10.2""}",pass,0,0,3,3022.04365,41.79826700000012,2980.245383,16114.881751,,,,insufficient build samples (need 10)
+docusaurus,edit-to-dom,"{""core"": ""3.10.2"", ""preset_classic"": ""3.10.2""}",pass,0,0,10,200.124375,14.591521,180.887166,314.965728,,,,descriptive only: edits share one server/browser session
+docusaurus,warm-build,"{""core"": ""3.10.2"", ""preset_classic"": ""3.10.2""}",pass,0,0,3,3058.12549,31.927515000000312,3006.655149,3090.053005,,,,insufficient build samples (need 10)
+hugo,clean-build,"""hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8 linux/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio""",fail,0,0,3,63.961654,2.414863000000004,61.546791,67.829311,,,,insufficient build samples (need 10)
+hugo,edit-to-dom,"""hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8 linux/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio""",fail,0,0,10,403.8237585,50.47670149999999,265.295618,517.146528,,,,descriptive only: edits share one server/browser session
+hugo,warm-build,"""hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8 linux/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio""",fail,0,0,3,63.035587,2.7416819999999973,60.293905,74.634531,,,,insufficient build samples (need 10)
+material-for-mkdocs,clean-build,"{""mkdocs"": ""1.6.1"", ""mkdocs-material"": ""9.7.7"", ""python"": ""Python 3.12.15""}",pass,0,0,3,584.950301,20.43344400000001,564.516857,611.342501,,,,insufficient build samples (need 10)
+material-for-mkdocs,edit-to-dom,"{""mkdocs"": ""1.6.1"", ""mkdocs-material"": ""9.7.7"", ""python"": ""Python 3.12.15""}",pass,0,0,10,910.8741785,8.090575000000001,898.586384,945.4487,,,,descriptive only: edits share one server/browser session
+material-for-mkdocs,warm-build,"{""mkdocs"": ""1.6.1"", ""mkdocs-material"": ""9.7.7"", ""python"": ""Python 3.12.15""}",pass,0,0,3,593.72403,0.8274240000000646,586.537114,594.551454,,,,insufficient build samples (need 10)
+mdu,clean-build,"""5.3.0+e3d7987c58a1d68d3087a8d8a6e06395176bbe0f""",pass,0,0,3,433.835685,5.22213099999999,417.485831,439.057816,,,,insufficient build samples (need 10)
+mdu,edit-to-dom,"""5.3.0+e3d7987c58a1d68d3087a8d8a6e06395176bbe0f""",pass,0,0,10,225.238012,12.870323499999998,207.187886,246.832897,,,,descriptive only: edits share one server/browser session
+mdu,warm-build,"""5.3.0+e3d7987c58a1d68d3087a8d8a6e06395176bbe0f""",pass,0,0,3,433.706383,0.4341370000000211,433.272246,440.468757,,,,insufficient build samples (need 10)
+mkdocs-2,clean-build,"{""mkdocs"": ""2.0.dev6"", ""python"": ""Python 3.12.15""}",pass,0,0,3,220.695609,8.959834999999998,211.735774,357.45749,,,,insufficient build samples (need 10)
+mkdocs-2,edit-to-dom,"{""mkdocs"": ""2.0.dev6"", ""python"": ""Python 3.12.15""}",pass,0,1,0,,,,,,,,no valid samples
+mkdocs-2,warm-build,"{""mkdocs"": ""2.0.dev6"", ""python"": ""Python 3.12.15""}",pass,0,0,3,215.779637,0.3930419999999799,215.260933,216.172679,,,,insufficient build samples (need 10)
+vitepress,clean-build,"""1.6.4""",pass,0,0,3,3075.224502,70.73380899999984,3004.490693,3169.251498,,,,insufficient build samples (need 10)
+vitepress,edit-to-dom,"""1.6.4""",pass,0,0,10,33.0234665,0.37127049999999784,32.573368,49.916771,,,,descriptive only: edits share one server/browser session
+vitepress,warm-build,"""1.6.4""",pass,0,0,3,3069.872871,22.334239000000252,3047.538632,3131.684554,,,,insufficient build samples (need 10)
+zensical,clean-build,"{""python"": ""Python 3.12.15"", ""zensical"": ""0.0.72""}",pass,0,0,3,633.580155,3.0468309999999974,630.533324,643.644501,,,,insufficient build samples (need 10)
+zensical,edit-to-dom,"{""python"": ""Python 3.12.15"", ""zensical"": ""0.0.72""}",pass,0,0,10,186.491138,1.21776100000001,185.166672,264.270744,,,,descriptive only: edits share one server/browser session
+zensical,warm-build,"{""python"": ""Python 3.12.15"", ""zensical"": ""0.0.72""}",pass,0,0,3,406.780873,0.5877099999999587,406.193163,410.800732,,,,insufficient build samples (need 10)

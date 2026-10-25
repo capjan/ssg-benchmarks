@@ -8,6 +8,8 @@ See the [latest run summary](data/results/40139448552-1/summary.md), [raw observ
 
 ![Latest calibration run: build and edit medians](data/results/40139448552-1/chart.svg)
 
+The [distribution report](data/analysis/40139448552-1/statistics.md) adds individual samples, median absolute deviation, failure counts, and [CSV export](data/analysis/40139448552-1/statistics.csv) to the saved run. Future runs generate these reports automatically. Small samples and edits sharing one browser session are explicitly identified; see the [uncertainty rules](docs/runner.md#distribution-and-uncertainty-reports).
+
 ## What we plan to measure
 
 - Clean production build time

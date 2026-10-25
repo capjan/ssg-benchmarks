@@ -8,8 +8,6 @@ on:
     paths:
       - .github/workflows/benchmark.yml
       - data/participants.yml
-      - docs/workload.md
-      - docs/feature-matrix.md
       - package.json
       - package-lock.json
       - requirements/**
@@ -65,6 +63,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Check statistical analysis
+        run: python -m unittest discover -s scripts -p 'test_*.py'
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 10.0.203
@@ -93,6 +93,13 @@ jobs:
       - name: Run benchmark
         id: bench
         run: node scripts/run_benchmark.mjs
+      - name: Analyze timing distributions
+        if: always() && hashFiles('artifacts/**/results.jsonl') != ''
+        run: |
+          for result in artifacts/*/results.jsonl; do
+            run_dir="$(dirname "$result")"
+            python scripts/analyze.py "$run_dir" --output "$run_dir"
+          done
       - name: Upload raw results and logs
         if: always() && hashFiles('artifacts/**/environment.json') != ''
         uses: actions/upload-artifact@v4
@@ -126,6 +133,10 @@ jobs:
           cp "$run_dir/feature-matrix.json" "$result_dir/feature-matrix.json"
           cp "$run_dir/summary.md" "$result_dir/summary.md"
           cp "$run_dir/chart.svg" "$result_dir/chart.svg"
+          cp "$run_dir/statistics.json" "$result_dir/statistics.json"
+          cp "$run_dir/statistics.csv" "$result_dir/statistics.csv"
+          cp "$run_dir/statistics.md" "$result_dir/statistics.md"
+          cp "$run_dir/distribution.svg" "$result_dir/distribution.svg"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$result_dir"
