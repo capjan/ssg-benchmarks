@@ -12,7 +12,7 @@ The common profile uses portable Markdown and avoids framework-specific syntax u
 
 No front matter is required in the initial corpus; page titles come from the first heading and navigation order from the shared path manifest. This keeps content portable and avoids testing metadata conventions instead of rendering.
 
-Before the first timed run, each feature must be marked in a versioned parity matrix as native, enabled by an official extension, enabled by a third-party extension, or unsupported. If a feature cannot be made equivalent without custom preprocessing, remove it from the common profile and record it as a separate extension profile.
+Each feature is recorded in a versioned parity matrix as native, enabled by an official extension, enabled by a third-party extension, or unsupported for the tested configuration. A mismatch remains visible and does not erase valid performance timings. Before a comparative ranking, either make the common profile equivalent or report separate parity groups. If a feature cannot be made equivalent without custom preprocessing, move it to a separate extension profile.
 
 ## Corpus shape
 
@@ -27,5 +27,9 @@ Before the first timed run, each feature must be marked in a versioned parity ma
 
 The adapter may translate the shared page manifest into each tool's native configuration, but it must not rewrite Markdown content or pre-render HTML. Validate route count, required text and elements, link destinations, and edit propagation.
 
-The common-output profile uses the same small HTML/CSS shell as far as each templating system permits. A later native-docs profile can add default themes and richer features such as Mermaid diagrams, admonitions, search, and syntax highlighting. Results from those two profiles answer different questions and stay in separate chart series.
+The common-output profile uses the same small HTML/CSS shell as far as each templating system permits. The native-docs profile uses default themes and can later add richer features such as Mermaid diagrams, admonitions, search, and syntax highlighting. Results from the two profiles answer different questions and stay in separate chart series.
 
+
+## First automated profile
+
+The first runner uses each documentation tool's standard site setup (Starlight, VitePress default theme, Docusaurus Classic, Material, and Zensical Classic), plus a minimal Hugo shell and MDU's built-in output. These measurements compare the configured documentation toolchains and are calibration data; they do not isolate the underlying Markdown engine or support a ranking. A later common-output profile can reduce theme differences.

@@ -1,0 +1,70 @@
+{
+  "run_id": "40016228825-1",
+  "started_at": "2026-10-23T20:04:41.085Z",
+  "source_commit": "4fcf7034d50cec2bef30b11a58b5f0dd5c951a61",
+  "runner_os": "Linux",
+  "runner_arch": "X64",
+  "runner_image_os": "ubuntu24",
+  "runner_image_version": "20261012.334.1",
+  "platform": "Linux 6.17.0-1022-azure",
+  "cpu_model": "AMD EPYC 9V45 96-Core Processor",
+  "logical_cpus": 4,
+  "memory_bytes": 16766414848,
+  "node": "v22.23.4",
+  "python": "Python 3.12.15",
+  "dotnet": "10.0.401",
+  "playwright": "1.64.1",
+  "chromium": "156.0.8078.4",
+  "versions": {
+    "astro": "7.4.2",
+    "@astrojs/starlight": "0.42.7",
+    "vitepress": "1.6.4",
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "@docusaurus/faster": "3.10.2",
+    "@mdx-js/react": "3.1.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "playwright": "1.64.1",
+    "astro-starlight": {
+      "astro": "7.4.2",
+      "starlight": "0.42.7"
+    },
+    "docusaurus": {
+      "core": "3.10.2",
+      "preset_classic": "3.10.2"
+    },
+    "mdu": "5.3.0+e3d7987c58a1d68d3087a8d8a6e06395176bbe0f",
+    "hugo": "hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8 linux/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio",
+    "material-for-mkdocs": {
+      "mkdocs": "1.6.1",
+      "mkdocs-material": "9.7.7",
+      "python": "Python 3.12.15"
+    },
+    "zensical": {
+      "zensical": "0.0.72",
+      "python": "Python 3.12.15"
+    },
+    "mkdocs-2": {
+      "mkdocs": "2.0.dev6",
+      "python": "Python 3.12.15"
+    }
+  },
+  "python_locks": {
+    "material-for-mkdocs": "babel==2.18.0\nbackrefs==8.1\ncertifi==2026.10.23\ncharset-normalizer==3.5.2\nclick==8.5.0\ncolorama==0.4.6\nghp-import==2.1.0\nidna==3.20\nJinja2==3.1.6\nMarkdown==3.11.2\nMarkupSafe==3.0.4\nmergedeep==1.3.4\nmkdocs==1.6.1\nmkdocs-get-deps==0.2.2\nmkdocs-material==9.7.7\nmkdocs-material-extensions==1.3.1\npackaging==26.3\npaginate==0.5.7\npathspec==1.1.1\nplatformdirs==4.13.5\nPygments==2.21.0\npymdown-extensions==12.3\npython-dateutil==3.0.0\nPyYAML==6.0.3\npyyaml_env_tag==1.1\nrequests==2.34.2\nsix==1.17.0\ntzdata==2026.5\nurllib3==2.8.0\nwatchdog==6.0.0",
+    "zensical": "click==8.5.0\ndeepmerge==3.0.1\nJinja2==3.1.6\nMarkdown==3.11.2\nMarkupSafe==3.0.4\npathspec==1.1.1\nPygments==2.21.0\npymdown-extensions==12.3\nPyYAML==6.0.3\ntomli==2.5.0\nzensical==0.0.72",
+    "mkdocs-2": "click==8.5.0\nhttpx==1.0.dev6\nJinja2==3.1.6\nMarkdown==3.11.2\nMarkupSafe==3.0.4\nmkdocs==2.0.dev6\ntruststore==0.10.5\ntyping_extensions==4.16.0"
+  },
+  "lock_hashes": {
+    "npm": "797f4f4addc5f8d001654fa274098cd8e9aa87224d82274a44988af30649053a",
+    "material": "1a7bb96ceecf77fdd2396d81aa08f0b090d085b88689776df32585e156ca3de7",
+    "zensical": "ec7165efa32127cfa03c1b61fa5eb5aa0ff5564558752b9abb0b4af7a299e49d",
+    "mkdocs2": "bb6ed72c8fa0b589fec3865494f22a5a32d03cd92c4e39cd1b1e20ec677268e9"
+  },
+  "python_lock_hashes": {
+    "material-for-mkdocs": "7f7012efaa63fdc8883f525e8827d7f1ae4fd978c5e7206aaad9a69e923eaf16",
+    "zensical": "af73bbbae7ec767c77b91c9d561826aa78a61a5fa46099be7876be960fb6fc78",
+    "mkdocs-2": "edd7d0468da8e7dabfffdcaec538cea7981ad9314ca957363299473c9ea32968"
+  },
+  "environment_profile_id": "18ba9ea2a0eef12e"
+}

@@ -1,0 +1,634 @@
+{
+  "schema_version": 1,
+  "run_id": "40139448552-1",
+  "environment_profile_id": "5083b2ff4c4857d7",
+  "corpus_sha256": "4370f46de4eedacc0490038790456c385be59c86c1a30840fd6371b7fb0d59c1",
+  "corpus_size": 50,
+  "source_results_sha256": "172d67fda93b40e30fb027f4df797ae0534d7cdf11e2034ef048174a321bfff0",
+  "analyzer_sha256": "485b05e0c8a075e3d12ed002f4712472540d8c6137674dcc6c12e83da37f74e5",
+  "bootstrap_repetitions": 5000,
+  "bootstrap_seed": 20261025,
+  "groups": [
+    {
+      "participant": "astro-starlight",
+      "scenario": "clean-build",
+      "tool_version": {
+        "astro": "7.4.2",
+        "starlight": "0.42.7"
+      },
+      "feature_parity": "fail",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 2230.322076,
+      "mad_ms": 71.69447499999978,
+      "min_ms": 2158.627601,
+      "max_ms": 2401.401054,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        2401.401054,
+        2230.322076,
+        2158.627601
+      ]
+    },
+    {
+      "participant": "astro-starlight",
+      "scenario": "edit-to-dom",
+      "tool_version": {
+        "astro": "7.4.2",
+        "starlight": "0.42.7"
+      },
+      "feature_parity": "fail",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 10,
+      "median_ms": 737.8713805,
+      "mad_ms": 2.500201500000003,
+      "min_ms": 731.363577,
+      "max_ms": 783.627614,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "descriptive only: edits share one server/browser session",
+      "samples_ms": [
+        783.627614,
+        738.9081,
+        765.857957,
+        738.902559,
+        733.119299,
+        738.324371,
+        737.41839,
+        735.463083,
+        735.279275,
+        731.363577
+      ]
+    },
+    {
+      "participant": "astro-starlight",
+      "scenario": "warm-build",
+      "tool_version": {
+        "astro": "7.4.2",
+        "starlight": "0.42.7"
+      },
+      "feature_parity": "fail",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 2281.505323,
+      "mad_ms": 8.635901999999987,
+      "min_ms": 2123.393622,
+      "max_ms": 2290.141225,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        2123.393622,
+        2290.141225,
+        2281.505323
+      ]
+    },
+    {
+      "participant": "docusaurus",
+      "scenario": "clean-build",
+      "tool_version": {
+        "core": "3.10.2",
+        "preset_classic": "3.10.2"
+      },
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 3022.04365,
+      "mad_ms": 41.79826700000012,
+      "min_ms": 2980.245383,
+      "max_ms": 16114.881751,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        16114.881751,
+        3022.04365,
+        2980.245383
+      ]
+    },
+    {
+      "participant": "docusaurus",
+      "scenario": "edit-to-dom",
+      "tool_version": {
+        "core": "3.10.2",
+        "preset_classic": "3.10.2"
+      },
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 10,
+      "median_ms": 200.124375,
+      "mad_ms": 14.591521,
+      "min_ms": 180.887166,
+      "max_ms": 314.965728,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "descriptive only: edits share one server/browser session",
+      "samples_ms": [
+        314.965728,
+        227.463427,
+        218.441719,
+        202.257776,
+        208.713762,
+        188.299682,
+        197.990974,
+        184.420676,
+        186.645032,
+        180.887166
+      ]
+    },
+    {
+      "participant": "docusaurus",
+      "scenario": "warm-build",
+      "tool_version": {
+        "core": "3.10.2",
+        "preset_classic": "3.10.2"
+      },
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 3058.12549,
+      "mad_ms": 31.927515000000312,
+      "min_ms": 3006.655149,
+      "max_ms": 3090.053005,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        3006.655149,
+        3058.12549,
+        3090.053005
+      ]
+    },
+    {
+      "participant": "hugo",
+      "scenario": "clean-build",
+      "tool_version": "hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8 linux/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio",
+      "feature_parity": "fail",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 63.961654,
+      "mad_ms": 2.414863000000004,
+      "min_ms": 61.546791,
+      "max_ms": 67.829311,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        67.829311,
+        61.546791,
+        63.961654
+      ]
+    },
+    {
+      "participant": "hugo",
+      "scenario": "edit-to-dom",
+      "tool_version": "hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8 linux/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio",
+      "feature_parity": "fail",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 10,
+      "median_ms": 403.8237585,
+      "mad_ms": 50.47670149999999,
+      "min_ms": 265.295618,
+      "max_ms": 517.146528,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "descriptive only: edits share one server/browser session",
+      "samples_ms": [
+        515.31828,
+        406.37014,
+        401.277377,
+        517.146528,
+        265.295618,
+        418.281418,
+        399.313754,
+        309.453586,
+        490.319502,
+        401.192439
+      ]
+    },
+    {
+      "participant": "hugo",
+      "scenario": "warm-build",
+      "tool_version": "hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8 linux/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio",
+      "feature_parity": "fail",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 63.035587,
+      "mad_ms": 2.7416819999999973,
+      "min_ms": 60.293905,
+      "max_ms": 74.634531,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        74.634531,
+        63.035587,
+        60.293905
+      ]
+    },
+    {
+      "participant": "material-for-mkdocs",
+      "scenario": "clean-build",
+      "tool_version": {
+        "mkdocs": "1.6.1",
+        "mkdocs-material": "9.7.7",
+        "python": "Python 3.12.15"
+      },
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 584.950301,
+      "mad_ms": 20.43344400000001,
+      "min_ms": 564.516857,
+      "max_ms": 611.342501,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        611.342501,
+        564.516857,
+        584.950301
+      ]
+    },
+    {
+      "participant": "material-for-mkdocs",
+      "scenario": "edit-to-dom",
+      "tool_version": {
+        "mkdocs": "1.6.1",
+        "mkdocs-material": "9.7.7",
+        "python": "Python 3.12.15"
+      },
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 10,
+      "median_ms": 910.8741785,
+      "mad_ms": 8.090575000000001,
+      "min_ms": 898.586384,
+      "max_ms": 945.4487,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "descriptive only: edits share one server/browser session",
+      "samples_ms": [
+        945.4487,
+        898.586384,
+        911.127156,
+        908.555976,
+        920.36782,
+        902.304211,
+        909.63819,
+        910.621201,
+        918.485361,
+        924.109434
+      ]
+    },
+    {
+      "participant": "material-for-mkdocs",
+      "scenario": "warm-build",
+      "tool_version": {
+        "mkdocs": "1.6.1",
+        "mkdocs-material": "9.7.7",
+        "python": "Python 3.12.15"
+      },
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 593.72403,
+      "mad_ms": 0.8274240000000646,
+      "min_ms": 586.537114,
+      "max_ms": 594.551454,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        586.537114,
+        594.551454,
+        593.72403
+      ]
+    },
+    {
+      "participant": "mdu",
+      "scenario": "clean-build",
+      "tool_version": "5.3.0+e3d7987c58a1d68d3087a8d8a6e06395176bbe0f",
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 433.835685,
+      "mad_ms": 5.22213099999999,
+      "min_ms": 417.485831,
+      "max_ms": 439.057816,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        433.835685,
+        439.057816,
+        417.485831
+      ]
+    },
+    {
+      "participant": "mdu",
+      "scenario": "edit-to-dom",
+      "tool_version": "5.3.0+e3d7987c58a1d68d3087a8d8a6e06395176bbe0f",
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 10,
+      "median_ms": 225.238012,
+      "mad_ms": 12.870323499999998,
+      "min_ms": 207.187886,
+      "max_ms": 246.832897,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "descriptive only: edits share one server/browser session",
+      "samples_ms": [
+        234.190002,
+        233.509517,
+        246.832897,
+        238.780629,
+        237.436042,
+        216.966507,
+        208.135656,
+        214.139819,
+        207.187886,
+        209.412149
+      ]
+    },
+    {
+      "participant": "mdu",
+      "scenario": "warm-build",
+      "tool_version": "5.3.0+e3d7987c58a1d68d3087a8d8a6e06395176bbe0f",
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 433.706383,
+      "mad_ms": 0.4341370000000211,
+      "min_ms": 433.272246,
+      "max_ms": 440.468757,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        440.468757,
+        433.706383,
+        433.272246
+      ]
+    },
+    {
+      "participant": "mkdocs-2",
+      "scenario": "clean-build",
+      "tool_version": {
+        "mkdocs": "2.0.dev6",
+        "python": "Python 3.12.15"
+      },
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 220.695609,
+      "mad_ms": 8.959834999999998,
+      "min_ms": 211.735774,
+      "max_ms": 357.45749,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        357.45749,
+        220.695609,
+        211.735774
+      ]
+    },
+    {
+      "participant": "mkdocs-2",
+      "scenario": "edit-to-dom",
+      "tool_version": {
+        "mkdocs": "2.0.dev6",
+        "python": "Python 3.12.15"
+      },
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 1,
+      "n": 0,
+      "median_ms": null,
+      "mad_ms": null,
+      "min_ms": null,
+      "max_ms": null,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "no valid samples",
+      "samples_ms": []
+    },
+    {
+      "participant": "mkdocs-2",
+      "scenario": "warm-build",
+      "tool_version": {
+        "mkdocs": "2.0.dev6",
+        "python": "Python 3.12.15"
+      },
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 215.779637,
+      "mad_ms": 0.3930419999999799,
+      "min_ms": 215.260933,
+      "max_ms": 216.172679,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        216.172679,
+        215.260933,
+        215.779637
+      ]
+    },
+    {
+      "participant": "vitepress",
+      "scenario": "clean-build",
+      "tool_version": "1.6.4",
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 3075.224502,
+      "mad_ms": 70.73380899999984,
+      "min_ms": 3004.490693,
+      "max_ms": 3169.251498,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        3004.490693,
+        3075.224502,
+        3169.251498
+      ]
+    },
+    {
+      "participant": "vitepress",
+      "scenario": "edit-to-dom",
+      "tool_version": "1.6.4",
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 10,
+      "median_ms": 33.0234665,
+      "mad_ms": 0.37127049999999784,
+      "min_ms": 32.573368,
+      "max_ms": 49.916771,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "descriptive only: edits share one server/browser session",
+      "samples_ms": [
+        49.916771,
+        33.721912,
+        32.80243,
+        32.731024,
+        33.972486,
+        33.244503,
+        32.745021,
+        33.85442,
+        32.573368,
+        32.762572
+      ]
+    },
+    {
+      "participant": "vitepress",
+      "scenario": "warm-build",
+      "tool_version": "1.6.4",
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 3069.872871,
+      "mad_ms": 22.334239000000252,
+      "min_ms": 3047.538632,
+      "max_ms": 3131.684554,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        3069.872871,
+        3131.684554,
+        3047.538632
+      ]
+    },
+    {
+      "participant": "zensical",
+      "scenario": "clean-build",
+      "tool_version": {
+        "python": "Python 3.12.15",
+        "zensical": "0.0.72"
+      },
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 633.580155,
+      "mad_ms": 3.0468309999999974,
+      "min_ms": 630.533324,
+      "max_ms": 643.644501,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        633.580155,
+        643.644501,
+        630.533324
+      ]
+    },
+    {
+      "participant": "zensical",
+      "scenario": "edit-to-dom",
+      "tool_version": {
+        "python": "Python 3.12.15",
+        "zensical": "0.0.72"
+      },
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 10,
+      "median_ms": 186.491138,
+      "mad_ms": 1.21776100000001,
+      "min_ms": 185.166672,
+      "max_ms": 264.270744,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "descriptive only: edits share one server/browser session",
+      "samples_ms": [
+        264.270744,
+        186.878387,
+        185.380082,
+        188.889591,
+        187.913768,
+        185.998328,
+        186.103889,
+        185.441522,
+        185.166672,
+        191.364522
+      ]
+    },
+    {
+      "participant": "zensical",
+      "scenario": "warm-build",
+      "tool_version": {
+        "python": "Python 3.12.15",
+        "zensical": "0.0.72"
+      },
+      "feature_parity": "pass",
+      "failed": 0,
+      "unsupported": 0,
+      "n": 3,
+      "median_ms": 406.780873,
+      "mad_ms": 0.5877099999999587,
+      "min_ms": 406.193163,
+      "max_ms": 410.800732,
+      "p95_ms": null,
+      "ci95_low_ms": null,
+      "ci95_high_ms": null,
+      "uncertainty": "insufficient build samples (need 10)",
+      "samples_ms": [
+        406.193163,
+        406.780873,
+        410.800732
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="630" viewBox="0 0 1460 630" role="img" aria-labelledby="title desc">
+<title id="title">Static documentation generator benchmark: first calibration run</title>
+<desc id="desc">Median clean and warm build times, plus time from a source edit to visible browser DOM, for eight documentation generators. MkDocs 2.0 does not support browser live reload in this preview server.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#172033}.muted{fill:#65718a}.grid{stroke:#e5e9f0;stroke-width:1}.row{stroke:#f0f2f6;stroke-width:1}.clean{fill:#4263eb}.warm{fill:#20a37a}.edit{fill:#e38b27}.label{font-size:13px}.tick{font-size:11px}.value{font-size:11px;font-weight:600}.title{font-size:24px;font-weight:700}.subtitle{font-size:13px}.panel{font-size:16px;font-weight:700}.legend{font-size:12px}</style>
+<text x="30" y="42" class="title">Static documentation generators</text>
+<text x="30" y="68" class="subtitle muted">First calibration run · 50 pages · median latency</text>
+<text x="30" y="127" class="panel">Builds (ms)</text>
+<rect x="340" y="112" width="12" height="12" rx="2" class="clean"/><text x="359" y="123" class="legend">Clean</text>
+<rect x="424" y="112" width="12" height="12" rx="2" class="warm"/><text x="443" y="123" class="legend">No-op</text>
+<text x="850" y="127" class="panel">Edit to visible DOM (ms)</text>
+<line x1="220.0" y1="154" x2="220.0" y2="516" class="grid"/>
+<text x="220.0" y="535" text-anchor="middle" class="tick muted">0</text>
+<line x1="328.0" y1="154" x2="328.0" y2="516" class="grid"/>
+<text x="328.0" y="535" text-anchor="middle" class="tick muted">500</text>
+<line x1="436.0" y1="154" x2="436.0" y2="516" class="grid"/>
+<text x="436.0" y="535" text-anchor="middle" class="tick muted">1,000</text>
+<line x1="544.0" y1="154" x2="544.0" y2="516" class="grid"/>
+<text x="544.0" y="535" text-anchor="middle" class="tick muted">1,500</text>
+<line x1="652.0" y1="154" x2="652.0" y2="516" class="grid"/>
+<text x="652.0" y="535" text-anchor="middle" class="tick muted">2,000</text>
+<line x1="760.0" y1="154" x2="760.0" y2="516" class="grid"/>
+<text x="760.0" y="535" text-anchor="middle" class="tick muted">2,500</text>
+<line x1="940.0" y1="154" x2="940.0" y2="516" class="grid"/>
+<text x="940.0" y="535" text-anchor="middle" class="tick muted">0</text>
+<line x1="1040.0" y1="154" x2="1040.0" y2="516" class="grid"/>
+<text x="1040.0" y="535" text-anchor="middle" class="tick muted">250</text>
+<line x1="1140.0" y1="154" x2="1140.0" y2="516" class="grid"/>
+<text x="1140.0" y="535" text-anchor="middle" class="tick muted">500</text>
+<line x1="1240.0" y1="154" x2="1240.0" y2="516" class="grid"/>
+<text x="1240.0" y="535" text-anchor="middle" class="tick muted">750</text>
+<line x1="1340.0" y1="154" x2="1340.0" y2="516" class="grid"/>
+<text x="1340.0" y="535" text-anchor="middle" class="tick muted">1,000</text>
+<line x1="20" y1="206" x2="1390" y2="206" class="row"/>
+<text x="24" y="186" class="label">Hugo</text>
+<rect x="220" y="168" width="10.4" height="10" rx="3" class="clean"/>
+<text x="236.4" y="177" class="value">48.2</text>
+<rect x="220" y="182" width="10.2" height="10" rx="3" class="warm"/>
+<text x="236.2" y="191" class="value">47.0</text>
+<rect x="940" y="175" width="159.9" height="13" rx="4" class="edit"/>
+<text x="1105.9" y="186" class="value">399.8</text>
+<line x1="20" y1="250" x2="1390" y2="250" class="row"/>
+<text x="24" y="230" class="label">MkDocs 2.0</text>
+<rect x="220" y="212" width="36.4" height="10" rx="3" class="clean"/>
+<text x="262.4" y="221" class="value">168.5</text>
+<rect x="220" y="226" width="35.3" height="10" rx="3" class="warm"/>
+<text x="261.3" y="235" class="value">163.3</text>
+<text x="946" y="230" class="label muted">Unsupported</text>
+<line x1="20" y1="294" x2="1390" y2="294" class="row"/>
+<text x="24" y="274" class="label">MDU</text>
+<rect x="220" y="256" width="70.5" height="10" rx="3" class="clean"/>
+<text x="296.5" y="265" class="value">326.4</text>
+<rect x="220" y="270" width="75.9" height="10" rx="3" class="warm"/>
+<text x="301.9" y="279" class="value">351.2</text>
+<rect x="940" y="263" width="82.8" height="13" rx="4" class="edit"/>
+<text x="1028.8" y="274" class="value">207.0</text>
+<line x1="20" y1="338" x2="1390" y2="338" class="row"/>
+<text x="24" y="318" class="label">Material for MkDocs</text>
+<rect x="220" y="300" width="91.6" height="10" rx="3" class="clean"/>
+<text x="317.6" y="309" class="value">424.2</text>
+<rect x="220" y="314" width="91.4" height="10" rx="3" class="warm"/>
+<text x="317.4" y="323" class="value">423.3</text>
+<rect x="940" y="307" width="360.7" height="13" rx="4" class="edit"/>
+<text x="1306.7" y="318" class="value">901.8</text>
+<line x1="20" y1="382" x2="1390" y2="382" class="row"/>
+<text x="24" y="362" class="label">Zensical</text>
+<rect x="220" y="344" width="103.4" height="10" rx="3" class="clean"/>
+<text x="329.4" y="353" class="value">478.6</text>
+<rect x="220" y="358" width="74.3" height="10" rx="3" class="warm"/>
+<text x="300.3" y="367" class="value">343.9</text>
+<rect x="940" y="351" width="70.5" height="13" rx="4" class="edit"/>
+<text x="1016.5" y="362" class="value">176.4</text>
+<line x1="20" y1="426" x2="1390" y2="426" class="row"/>
+<text x="24" y="406" class="label">Astro + Starlight</text>
+<rect x="220" y="388" width="368.8" height="10" rx="3" class="clean"/>
+<text x="594.8" y="397" class="value">1,707.5</text>
+<rect x="220" y="402" width="367.2" height="10" rx="3" class="warm"/>
+<text x="593.2" y="411" class="value">1,700.1</text>
+<rect x="940" y="395" width="284.1" height="13" rx="4" class="edit"/>
+<text x="1230.1" y="406" class="value">710.4</text>
+<line x1="20" y1="470" x2="1390" y2="470" class="row"/>
+<text x="24" y="450" class="label">Docusaurus</text>
+<rect x="220" y="432" width="493.5" height="10" rx="3" class="clean"/>
+<text x="719.5" y="441" class="value">2,284.8</text>
+<rect x="220" y="446" width="482.5" height="10" rx="3" class="warm"/>
+<text x="708.5" y="455" class="value">2,233.8</text>
+<rect x="940" y="439" width="65.2" height="13" rx="4" class="edit"/>
+<text x="1011.2" y="450" class="value">163.0</text>
+<line x1="20" y1="514" x2="1390" y2="514" class="row"/>
+<text x="24" y="494" class="label">VitePress</text>
+<rect x="220" y="476" width="516.7" height="10" rx="3" class="clean"/>
+<text x="742.7" y="485" class="value">2,392.2</text>
+<rect x="220" y="490" width="509.5" height="10" rx="3" class="warm"/>
+<text x="735.5" y="499" class="value">2,358.7</text>
+<rect x="940" y="483" width="6.7" height="13" rx="4" class="edit"/>
+<text x="952.7" y="494" class="value">16.8</text>
+<text x="220" y="563" class="tick muted">n=3 clean and no-op builds; edit n=10. 50 pages, seed 20261023.</text>
+<text x="220" y="583" class="tick muted">GitHub-hosted ubuntu-24.04 · image 20261012.334.1 · environment 18ba9ea2a0eef12e.</text>
+<text x="build_x" y="0" visibility="hidden"/>
+<text x="850" y="590" class="tick muted">MkDocs 2.0 preview: browser refresh unsupported.</text>
+<text x="850" y="610" class="tick muted">Calibration only, not a ranking.</text>
+</svg>

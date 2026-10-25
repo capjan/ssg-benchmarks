@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="470" role="img" aria-labelledby="title desc">
+<title id="title">Within-run timing distributions</title>
+<desc id="desc">Dots are individual observations; orange diamonds are medians. Each panel uses a separate millisecond scale. Feature failures are marked.</desc>
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:system-ui,sans-serif;fill:#172033;font-size:12px}.sample{fill:#4263eb;opacity:.6}.median{fill:#b45309}</style>
+<text x="20" y="25" style="font-size:20px">Timing distributions · calibration</text>
+<text x="20" y="48">Dots: samples · orange diamond: median · * feature audit failed · axes scale independently</text>
+<text x="15" y="111">astro-starlight *</text>
+<text x="15" y="151">docusaurus</text>
+<text x="15" y="191">hugo *</text>
+<text x="15" y="231">material-for-mkdocs</text>
+<text x="15" y="271">mdu</text>
+<text x="15" y="311">mkdocs-2</text>
+<text x="15" y="351">vitepress</text>
+<text x="15" y="391">zensical</text>
+<text x="210" y="78">clean-build (ms)</text>
+<path d="M210.0 92V425" stroke="#e5e9f0"/>
+<text x="210.0" y="444" text-anchor="middle">0</text>
+<path d="M287.5 92V425" stroke="#e5e9f0"/>
+<text x="287.5" y="444" text-anchor="middle">4230</text>
+<path d="M365.0 92V425" stroke="#e5e9f0"/>
+<text x="365.0" y="444" text-anchor="middle">8460</text>
+<path d="M442.5 92V425" stroke="#e5e9f0"/>
+<text x="442.5" y="444" text-anchor="middle">12690</text>
+<path d="M520.0 92V425" stroke="#e5e9f0"/>
+<text x="520.0" y="444" text-anchor="middle">16921</text>
+<circle cx="254.00" cy="101" r="3" class="sample"><title>2401.401 ms</title></circle>
+<circle cx="250.86" cy="104" r="3" class="sample"><title>2230.322 ms</title></circle>
+<circle cx="249.55" cy="107" r="3" class="sample"><title>2158.628 ms</title></circle>
+<path d="M250.86 101l5 6l-5 6l-5-6Z" class="median"><title>Median 2230.322 ms; n=3; failed=0</title></path>
+<circle cx="505.24" cy="141" r="3" class="sample"><title>16114.882 ms</title></circle>
+<circle cx="265.37" cy="144" r="3" class="sample"><title>3022.044 ms</title></circle>
+<circle cx="264.60" cy="147" r="3" class="sample"><title>2980.245 ms</title></circle>
+<path d="M265.37 141l5 6l-5 6l-5-6Z" class="median"><title>Median 3022.044 ms; n=3; failed=0</title></path>
+<circle cx="211.24" cy="181" r="3" class="sample"><title>67.829 ms</title></circle>
+<circle cx="211.13" cy="184" r="3" class="sample"><title>61.547 ms</title></circle>
+<circle cx="211.17" cy="187" r="3" class="sample"><title>63.962 ms</title></circle>
+<path d="M211.17 181l5 6l-5 6l-5-6Z" class="median"><title>Median 63.962 ms; n=3; failed=0</title></path>
+<circle cx="221.20" cy="221" r="3" class="sample"><title>611.343 ms</title></circle>
+<circle cx="220.34" cy="224" r="3" class="sample"><title>564.517 ms</title></circle>
+<circle cx="220.72" cy="227" r="3" class="sample"><title>584.950 ms</title></circle>
+<path d="M220.72 221l5 6l-5 6l-5-6Z" class="median"><title>Median 584.950 ms; n=3; failed=0</title></path>
+<circle cx="217.95" cy="261" r="3" class="sample"><title>433.836 ms</title></circle>
+<circle cx="218.04" cy="264" r="3" class="sample"><title>439.058 ms</title></circle>
+<circle cx="217.65" cy="267" r="3" class="sample"><title>417.486 ms</title></circle>
+<path d="M217.95 261l5 6l-5 6l-5-6Z" class="median"><title>Median 433.836 ms; n=3; failed=0</title></path>
+<circle cx="216.55" cy="301" r="3" class="sample"><title>357.457 ms</title></circle>
+<circle cx="214.04" cy="304" r="3" class="sample"><title>220.696 ms</title></circle>
+<circle cx="213.88" cy="307" r="3" class="sample"><title>211.736 ms</title></circle>
+<path d="M214.04 301l5 6l-5 6l-5-6Z" class="median"><title>Median 220.696 ms; n=3; failed=0</title></path>
+<circle cx="265.04" cy="341" r="3" class="sample"><title>3004.491 ms</title></circle>
+<circle cx="266.34" cy="344" r="3" class="sample"><title>3075.225 ms</title></circle>
+<circle cx="268.06" cy="347" r="3" class="sample"><title>3169.251 ms</title></circle>
+<path d="M266.34 341l5 6l-5 6l-5-6Z" class="median"><title>Median 3075.225 ms; n=3; failed=0</title></path>
+<circle cx="221.61" cy="381" r="3" class="sample"><title>633.580 ms</title></circle>
+<circle cx="221.79" cy="384" r="3" class="sample"><title>643.645 ms</title></circle>
+<circle cx="221.55" cy="387" r="3" class="sample"><title>630.533 ms</title></circle>
+<path d="M221.61 381l5 6l-5 6l-5-6Z" class="median"><title>Median 633.580 ms; n=3; failed=0</title></path>
+<text x="560" y="78">warm-build (ms)</text>
+<path d="M560.0 92V425" stroke="#e5e9f0"/>
+<text x="560.0" y="444" text-anchor="middle">0</text>
+<path d="M637.5 92V425" stroke="#e5e9f0"/>
+<text x="637.5" y="444" text-anchor="middle">822</text>
+<path d="M715.0 92V425" stroke="#e5e9f0"/>
+<text x="715.0" y="444" text-anchor="middle">1644</text>
+<path d="M792.5 92V425" stroke="#e5e9f0"/>
+<text x="792.5" y="444" text-anchor="middle">2466</text>
+<path d="M870.0 92V425" stroke="#e5e9f0"/>
+<text x="870.0" y="444" text-anchor="middle">3288</text>
+<circle cx="760.18" cy="101" r="3" class="sample"><title>2123.394 ms</title></circle>
+<circle cx="775.90" cy="104" r="3" class="sample"><title>2290.141 ms</title></circle>
+<circle cx="775.09" cy="107" r="3" class="sample"><title>2281.505 ms</title></circle>
+<path d="M775.09 101l5 6l-5 6l-5-6Z" class="median"><title>Median 2281.505 ms; n=3; failed=0</title></path>
+<circle cx="843.45" cy="141" r="3" class="sample"><title>3006.655 ms</title></circle>
+<circle cx="848.30" cy="144" r="3" class="sample"><title>3058.125 ms</title></circle>
+<circle cx="851.31" cy="147" r="3" class="sample"><title>3090.053 ms</title></circle>
+<path d="M848.30 141l5 6l-5 6l-5-6Z" class="median"><title>Median 3058.125 ms; n=3; failed=0</title></path>
+<circle cx="567.04" cy="181" r="3" class="sample"><title>74.635 ms</title></circle>
+<circle cx="565.94" cy="184" r="3" class="sample"><title>63.036 ms</title></circle>
+<circle cx="565.68" cy="187" r="3" class="sample"><title>60.294 ms</title></circle>
+<path d="M565.94 181l5 6l-5 6l-5-6Z" class="median"><title>Median 63.036 ms; n=3; failed=0</title></path>
+<circle cx="615.30" cy="221" r="3" class="sample"><title>586.537 ms</title></circle>
+<circle cx="616.05" cy="224" r="3" class="sample"><title>594.551 ms</title></circle>
+<circle cx="615.97" cy="227" r="3" class="sample"><title>593.724 ms</title></circle>
+<path d="M615.97 221l5 6l-5 6l-5-6Z" class="median"><title>Median 593.724 ms; n=3; failed=0</title></path>
+<circle cx="601.52" cy="261" r="3" class="sample"><title>440.469 ms</title></circle>
+<circle cx="600.89" cy="264" r="3" class="sample"><title>433.706 ms</title></circle>
+<circle cx="600.85" cy="267" r="3" class="sample"><title>433.272 ms</title></circle>
+<path d="M600.89 261l5 6l-5 6l-5-6Z" class="median"><title>Median 433.706 ms; n=3; failed=0</title></path>
+<circle cx="580.38" cy="301" r="3" class="sample"><title>216.173 ms</title></circle>
+<circle cx="580.29" cy="304" r="3" class="sample"><title>215.261 ms</title></circle>
+<circle cx="580.34" cy="307" r="3" class="sample"><title>215.780 ms</title></circle>
+<path d="M580.34 301l5 6l-5 6l-5-6Z" class="median"><title>Median 215.780 ms; n=3; failed=0</title></path>
+<circle cx="849.41" cy="341" r="3" class="sample"><title>3069.873 ms</title></circle>
+<circle cx="855.24" cy="344" r="3" class="sample"><title>3131.685 ms</title></circle>
+<circle cx="847.31" cy="347" r="3" class="sample"><title>3047.539 ms</title></circle>
+<path d="M849.41 341l5 6l-5 6l-5-6Z" class="median"><title>Median 3069.873 ms; n=3; failed=0</title></path>
+<circle cx="598.29" cy="381" r="3" class="sample"><title>406.193 ms</title></circle>
+<circle cx="598.35" cy="384" r="3" class="sample"><title>406.781 ms</title></circle>
+<circle cx="598.73" cy="387" r="3" class="sample"><title>410.801 ms</title></circle>
+<path d="M598.35 381l5 6l-5 6l-5-6Z" class="median"><title>Median 406.781 ms; n=3; failed=0</title></path>
+<text x="910" y="78">edit-to-dom (ms)</text>
+<path d="M910.0 92V425" stroke="#e5e9f0"/>
+<text x="910.0" y="444" text-anchor="middle">0</text>
+<path d="M987.5 92V425" stroke="#e5e9f0"/>
+<text x="987.5" y="444" text-anchor="middle">248</text>
+<path d="M1065.0 92V425" stroke="#e5e9f0"/>
+<text x="1065.0" y="444" text-anchor="middle">496</text>
+<path d="M1142.5 92V425" stroke="#e5e9f0"/>
+<text x="1142.5" y="444" text-anchor="middle">745</text>
+<path d="M1220.0 92V425" stroke="#e5e9f0"/>
+<text x="1220.0" y="444" text-anchor="middle">993</text>
+<circle cx="1154.71" cy="101" r="3" class="sample"><title>783.628 ms</title></circle>
+<circle cx="1140.74" cy="104" r="3" class="sample"><title>738.908 ms</title></circle>
+<circle cx="1149.16" cy="107" r="3" class="sample"><title>765.858 ms</title></circle>
+<circle cx="1140.74" cy="110" r="3" class="sample"><title>738.903 ms</title></circle>
+<circle cx="1138.93" cy="113" r="3" class="sample"><title>733.119 ms</title></circle>
+<circle cx="1140.56" cy="101" r="3" class="sample"><title>738.324 ms</title></circle>
+<circle cx="1140.28" cy="104" r="3" class="sample"><title>737.418 ms</title></circle>
+<circle cx="1139.67" cy="107" r="3" class="sample"><title>735.463 ms</title></circle>
+<circle cx="1139.61" cy="110" r="3" class="sample"><title>735.279 ms</title></circle>
+<circle cx="1138.39" cy="113" r="3" class="sample"><title>731.364 ms</title></circle>
+<path d="M1140.42 101l5 6l-5 6l-5-6Z" class="median"><title>Median 737.871 ms; n=10; failed=0</title></path>
+<circle cx="1008.36" cy="141" r="3" class="sample"><title>314.966 ms</title></circle>
+<circle cx="981.03" cy="144" r="3" class="sample"><title>227.463 ms</title></circle>
+<circle cx="978.21" cy="147" r="3" class="sample"><title>218.442 ms</title></circle>
+<circle cx="973.16" cy="150" r="3" class="sample"><title>202.258 ms</title></circle>
+<circle cx="975.18" cy="153" r="3" class="sample"><title>208.714 ms</title></circle>
+<circle cx="968.80" cy="141" r="3" class="sample"><title>188.300 ms</title></circle>
+<circle cx="971.83" cy="144" r="3" class="sample"><title>197.991 ms</title></circle>
+<circle cx="967.59" cy="147" r="3" class="sample"><title>184.421 ms</title></circle>
+<circle cx="968.28" cy="150" r="3" class="sample"><title>186.645 ms</title></circle>
+<circle cx="966.49" cy="153" r="3" class="sample"><title>180.887 ms</title></circle>
+<path d="M972.49 141l5 6l-5 6l-5-6Z" class="median"><title>Median 200.124 ms; n=10; failed=0</title></path>
+<circle cx="1070.92" cy="181" r="3" class="sample"><title>515.318 ms</title></circle>
+<circle cx="1036.90" cy="184" r="3" class="sample"><title>406.370 ms</title></circle>
+<circle cx="1035.31" cy="187" r="3" class="sample"><title>401.277 ms</title></circle>
+<circle cx="1071.49" cy="190" r="3" class="sample"><title>517.147 ms</title></circle>
+<circle cx="992.84" cy="193" r="3" class="sample"><title>265.296 ms</title></circle>
+<circle cx="1040.62" cy="181" r="3" class="sample"><title>418.281 ms</title></circle>
+<circle cx="1034.69" cy="184" r="3" class="sample"><title>399.314 ms</title></circle>
+<circle cx="1006.63" cy="187" r="3" class="sample"><title>309.454 ms</title></circle>
+<circle cx="1063.11" cy="190" r="3" class="sample"><title>490.320 ms</title></circle>
+<circle cx="1035.28" cy="193" r="3" class="sample"><title>401.192 ms</title></circle>
+<path d="M1036.10 181l5 6l-5 6l-5-6Z" class="median"><title>Median 403.824 ms; n=10; failed=0</title></path>
+<circle cx="1205.24" cy="221" r="3" class="sample"><title>945.449 ms</title></circle>
+<circle cx="1190.60" cy="224" r="3" class="sample"><title>898.586 ms</title></circle>
+<circle cx="1194.52" cy="227" r="3" class="sample"><title>911.127 ms</title></circle>
+<circle cx="1193.72" cy="230" r="3" class="sample"><title>908.556 ms</title></circle>
+<circle cx="1197.41" cy="233" r="3" class="sample"><title>920.368 ms</title></circle>
+<circle cx="1191.77" cy="221" r="3" class="sample"><title>902.304 ms</title></circle>
+<circle cx="1194.06" cy="224" r="3" class="sample"><title>909.638 ms</title></circle>
+<circle cx="1194.36" cy="227" r="3" class="sample"><title>910.621 ms</title></circle>
+<circle cx="1196.82" cy="230" r="3" class="sample"><title>918.485 ms</title></circle>
+<circle cx="1198.57" cy="233" r="3" class="sample"><title>924.109 ms</title></circle>
+<path d="M1194.44 221l5 6l-5 6l-5-6Z" class="median"><title>Median 910.874 ms; n=10; failed=0</title></path>
+<circle cx="983.13" cy="261" r="3" class="sample"><title>234.190 ms</title></circle>
+<circle cx="982.92" cy="264" r="3" class="sample"><title>233.510 ms</title></circle>
+<circle cx="987.08" cy="267" r="3" class="sample"><title>246.833 ms</title></circle>
+<circle cx="984.56" cy="270" r="3" class="sample"><title>238.781 ms</title></circle>
+<circle cx="984.14" cy="273" r="3" class="sample"><title>237.436 ms</title></circle>
+<circle cx="977.75" cy="261" r="3" class="sample"><title>216.967 ms</title></circle>
+<circle cx="975.00" cy="264" r="3" class="sample"><title>208.136 ms</title></circle>
+<circle cx="976.87" cy="267" r="3" class="sample"><title>214.140 ms</title></circle>
+<circle cx="974.70" cy="270" r="3" class="sample"><title>207.188 ms</title></circle>
+<circle cx="975.39" cy="273" r="3" class="sample"><title>209.412 ms</title></circle>
+<path d="M980.34 261l5 6l-5 6l-5-6Z" class="median"><title>Median 225.238 ms; n=10; failed=0</title></path>
+<text x="915" y="311">unsupported</text>
+<circle cx="925.59" cy="341" r="3" class="sample"><title>49.917 ms</title></circle>
+<circle cx="920.53" cy="344" r="3" class="sample"><title>33.722 ms</title></circle>
+<circle cx="920.24" cy="347" r="3" class="sample"><title>32.802 ms</title></circle>
+<circle cx="920.22" cy="350" r="3" class="sample"><title>32.731 ms</title></circle>
+<circle cx="920.61" cy="353" r="3" class="sample"><title>33.972 ms</title></circle>
+<circle cx="920.38" cy="341" r="3" class="sample"><title>33.245 ms</title></circle>
+<circle cx="920.23" cy="344" r="3" class="sample"><title>32.745 ms</title></circle>
+<circle cx="920.57" cy="347" r="3" class="sample"><title>33.854 ms</title></circle>
+<circle cx="920.17" cy="350" r="3" class="sample"><title>32.573 ms</title></circle>
+<circle cx="920.23" cy="353" r="3" class="sample"><title>32.763 ms</title></circle>
+<path d="M920.31 341l5 6l-5 6l-5-6Z" class="median"><title>Median 33.023 ms; n=10; failed=0</title></path>
+<circle cx="992.52" cy="381" r="3" class="sample"><title>264.271 ms</title></circle>
+<circle cx="968.36" cy="384" r="3" class="sample"><title>186.878 ms</title></circle>
+<circle cx="967.89" cy="387" r="3" class="sample"><title>185.380 ms</title></circle>
+<circle cx="968.99" cy="390" r="3" class="sample"><title>188.890 ms</title></circle>
+<circle cx="968.68" cy="393" r="3" class="sample"><title>187.914 ms</title></circle>
+<circle cx="968.08" cy="381" r="3" class="sample"><title>185.998 ms</title></circle>
+<circle cx="968.12" cy="384" r="3" class="sample"><title>186.104 ms</title></circle>
+<circle cx="967.91" cy="387" r="3" class="sample"><title>185.442 ms</title></circle>
+<circle cx="967.82" cy="390" r="3" class="sample"><title>185.167 ms</title></circle>
+<circle cx="969.76" cy="393" r="3" class="sample"><title>191.365 ms</title></circle>
+<path d="M968.24 381l5 6l-5 6l-5-6Z" class="median"><title>Median 186.491 ms; n=10; failed=0</title></path>
+<text x="20" y="464">Variation within one runner/session does not estimate variation between fresh machines. See statistics.md for failures and uncertainty.</text></svg>

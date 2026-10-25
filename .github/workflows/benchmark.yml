@@ -1,0 +1,146 @@
+name: Static site generator benchmark
+
+on:
+  push:
+    branches:
+      - main
+      - jan/**
+    paths:
+      - .github/workflows/benchmark.yml
+      - data/participants.yml
+      - package.json
+      - package-lock.json
+      - requirements/**
+      - scripts/**
+  workflow_dispatch:
+    inputs:
+      pages:
+        description: Number of generated Markdown pages
+        required: false
+        default: '50'
+        type: choice
+        options: ['50', '500', '5000']
+      samples:
+        description: Clean and warm build repetitions
+        required: false
+        default: '3'
+        type: choice
+        options: ['3', '10']
+      edits:
+        description: Browser-visible edit repetitions per generator
+        required: false
+        default: '10'
+        type: choice
+        options: ['10', '30']
+  schedule:
+    - cron: '27 4 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ssg-benchmark-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    timeout-minutes: 60
+    env:
+      HUGO_VERSION: 0.167.0
+      BENCH_PAGES: ${{ github.event.inputs.pages || '50' }}
+      BENCH_SAMPLES: ${{ github.event.inputs.samples || '3' }}
+      BENCH_EDITS: ${{ github.event.inputs.edits || '10' }}
+      BENCH_SEED: '20261023'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.23.4
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check statistical analysis
+        run: python -m unittest discover -s scripts -p 'test_*.py'
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.203
+      - name: Install pinned Node tools
+        run: npm ci
+      - name: Install browser
+        run: |
+          npx playwright install chromium
+          node --input-type=module -e "import { chromium } from 'playwright'; const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] }); await browser.close();"
+      - name: Install MDU
+        run: |
+          mkdir -p .tools/mdu
+          dotnet tool install --tool-path .tools/mdu mdu --version 5.3.0
+      - name: Install Hugo
+        run: |
+          mkdir -p .tools/hugo
+          curl --fail --location --silent --show-error "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.tar.gz" | tar -xz -C .tools/hugo hugo
+      - name: Install Python generators in isolated environments
+        run: |
+          python -m venv .tools/material
+          .tools/material/bin/pip install --disable-pip-version-check -r requirements/material.txt
+          python -m venv .tools/zensical
+          .tools/zensical/bin/pip install --disable-pip-version-check -r requirements/zensical.txt
+          python -m venv .tools/mkdocs-2
+          .tools/mkdocs-2/bin/pip install --disable-pip-version-check -r requirements/mkdocs-2.txt
+      - name: Run benchmark
+        id: bench
+        run: node scripts/run_benchmark.mjs
+      - name: Analyze timing distributions
+        if: always() && hashFiles('artifacts/**/results.jsonl') != ''
+        run: |
+          for result in artifacts/*/results.jsonl; do
+            run_dir="$(dirname "$result")"
+            python scripts/analyze.py "$run_dir" --output "$run_dir"
+          done
+      - name: Upload raw results and logs
+        if: always() && hashFiles('artifacts/**/environment.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-${{ github.run_id }}-${{ github.run_attempt }}
+          path: artifacts/
+          retention-days: 90
+
+  persist-results:
+    if: always() && github.ref == 'refs/heads/main' && needs.benchmark.result == 'success'
+    needs: benchmark
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/download-artifact@v4
+        with:
+          name: benchmark-${{ github.run_id }}-${{ github.run_attempt }}
+          path: downloaded
+      - name: Commit benchmark results
+        run: |
+          run_dir="downloaded/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          result_dir="data/results/${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          mkdir -p "$result_dir"
+          cp "$run_dir/results.jsonl" "$result_dir/results.jsonl"
+          cp "$run_dir/environment.json" "$result_dir/environment.json"
+          cp "$run_dir/manifest.json" "$result_dir/manifest.json"
+          cp "$run_dir/feature-matrix.json" "$result_dir/feature-matrix.json"
+          cp "$run_dir/summary.md" "$result_dir/summary.md"
+          cp "$run_dir/chart.svg" "$result_dir/chart.svg"
+          cp "$run_dir/statistics.json" "$result_dir/statistics.json"
+          cp "$run_dir/statistics.csv" "$result_dir/statistics.csv"
+          cp "$run_dir/statistics.md" "$result_dir/statistics.md"
+          cp "$run_dir/distribution.svg" "$result_dir/distribution.svg"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$result_dir"
+          if ! git diff --cached --quiet; then
+            git commit -m "data: record benchmark run ${GITHUB_RUN_ID}"
+            git push origin "HEAD:main"
+          fi

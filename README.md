@@ -2,17 +2,23 @@
 
 A reproducible, versioned benchmark for static site generators used to publish technical documentation. MDU is the first-party subject; the comparison set covers both general-purpose generators and documentation-focused tools.
 
-**Status:** benchmark design and candidate roster. No performance results have been collected or published yet.
+**Status:** hosted calibration results and the first automated feature audit are available. The latest successful run measured eight generators with 50 pages, three clean/no-op build samples, and ten browser edits per supported preview server. It contains 118 valid timings and one explicitly unsupported MkDocs 2.0 edit scenario; these are exploratory measurements, not a ranking. Six generators pass every checked feature in the shared fixture. Hugo has unresolved relative links and image paths; Astro + Starlight has unresolved relative Markdown links. These compatibility findings are reported separately from valid performance samples.
+
+See the [latest run summary](data/results/40139448552-1/summary.md), [raw observations](data/results/40139448552-1/results.jsonl), [feature audit evidence](data/results/40139448552-1/feature-matrix.json), [environment manifest](data/results/40139448552-1/environment.json), and generated [chart](data/results/40139448552-1/chart.svg). The full run and logs are available in [GitHub Actions](https://github.com/capjan/ssg-benchmarks/actions/runs/40139448552). The [first calibration run](data/results/40016228825-1/summary.md) is retained as historical data.
+
+![Latest calibration run: build and edit medians](data/results/40139448552-1/chart.svg)
+
+The [distribution report](data/analysis/40139448552-1/statistics.md) adds individual samples, median absolute deviation, failure counts, and [CSV export](data/analysis/40139448552-1/statistics.csv) to the saved run. Future runs generate these reports automatically. Small samples and edits sharing one browser session are explicitly identified; see the [uncertainty rules](docs/runner.md#distribution-and-uncertainty-reports).
 
 ## What we plan to measure
 
 - Clean production build time
-- Repeated and no-op build time
+- Repeated and warm build time
 - Time from a Markdown edit to updated output and visible browser content
-- Peak process memory and generated output size
-- Feature and output parity, so a fast but incomplete build does not count as a successful run
+- Generated output size; peak process memory is planned for a later measurement pass
+- Feature and output parity, reported beside performance so incomplete output stays visible
 
-See the [measurement plan](docs/measurement-plan.md), [shared workload](docs/workload.md), [tool landscape](docs/tool-landscape.md), and [version policy](docs/version-policy.md).
+See the [measurement plan](docs/measurement-plan.md), [runner guide](docs/runner.md), [shared workload](docs/workload.md), [feature matrix](docs/feature-matrix.md), [tool landscape](docs/tool-landscape.md), and [version policy](docs/version-policy.md).
 
 ## Initial comparison set
 
@@ -33,8 +39,9 @@ Every result will record exact generator, theme/plugin, language runtime, depend
 ## Principles
 
 1. Same deterministic content corpus and resource limits for every candidate.
-2. Verify generated routes, required content, local links, and browser-visible edits before recording timings.
+2. Report generated-route, content, feature-parity, and browser-visible edit checks alongside timings; feature mismatches remain visible without discarding otherwise valid timings.
 3. Publish raw samples and environment metadata alongside summaries and charts.
 4. Keep build performance separate from the performance of deployed pages.
 5. Never combine measurements from different hardware profiles into one ranking.
+6. Keep all raw observations and retain failed parity checks.
 
